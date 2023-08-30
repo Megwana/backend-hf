@@ -55,10 +55,6 @@ This repository hold the API for the full stack application HotFeet. This websit
 
 ## Entity Relationship Diagram
 
-<<<<<<< HEAD
-<!-- ![ERD Diagram](https://github.com/Megwana/backend-hf/assets/106391440/eb6efd1e-96f9-4ba8-a372-d82828a7ba7a) -->
-
-=======
 ![ERD Diagram](https://github.com/Megwana/backend-hf/assets/106391440/7807490b-d2ad-4cdf-b810-57defd04aeb6)
 >>>>>>> 350e77351db3de175311c4057b4c5980325136d6
 
