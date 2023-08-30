@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from drf_api.permissions import IsOwnerOrReadOnly
-from dislikes.models import Dislike  
-from dislikes.serializers import DislikeSerializer 
+from dislikes.models import Dislike
+from dislikes.serializers import DislikeSerializer
 
 
 class DislikeList(generics.ListCreateAPIView):
