@@ -74,3 +74,9 @@ This repository hold the API for the full stack application HotFeet. This websit
 | dislikes  | dislikes/ dislikes/:id/   | yes           | yes      | no     | yes    | no                 | no             |
 | comments  | comments/ comments/:id/   | yes           | yes      | yes    | yes    | post               | no             |
 | followers | followers/ followers/:id/ | yes           | yes      | no     | yes    | no                 | no             |
+
+## Main Technologies
++ HTML, CSS, JavaScript
++ React.js
++ Bootstrap.js
++ Django REST Framework
