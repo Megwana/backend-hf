@@ -1,3 +1,7 @@
+## Entity Relationship Diagram
+
+![ERD Diagram](https://github.com/Megwana/backend-hf/assets/106391440/eb6efd1e-96f9-4ba8-a372-d82828a7ba7a)
+
 ## Models and CRUD breakdown
 
 | model     | endpoints                 | create        | retrieve | update | delete | filter             | text search    |
