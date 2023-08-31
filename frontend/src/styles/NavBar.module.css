@@ -11,6 +11,7 @@
   a {
     color: #7990ff;
     transition: color ease-in-out 0.3s;
+    padding: 7px;
   }
   
   a:hover {
@@ -31,6 +32,6 @@
   
   i:hover {
     cursor: pointer;
-    transition: color ease-in-out 0.3s;
+    transition: color ease-in-out 0.2s;
     color: #2142b2;
   }
