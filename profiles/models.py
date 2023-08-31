@@ -22,7 +22,12 @@ class Profile(models.Model):
 
 
 def create_profile(sender, instance, created, **kwargs):
+    print("create_profile triggered")
     if created:
+        print(f"Creating profile for {instance}")
         Profile.objects.create(owner=instance)
+    else:
+        print("User instance not created, no profile created")
 
-    post_save.connect(create_profile, sender=User)
+
+post_save.connect(create_profile, sender=User)
