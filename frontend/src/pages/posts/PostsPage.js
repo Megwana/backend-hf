@@ -31,7 +31,7 @@ function PostsPage({ message, filter = "" }) {
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
-        console.error("Error fetching posts:", err.response ? err.response.data : err.message);
+        console.log(err);
       }
     };
 
@@ -43,8 +43,7 @@ function PostsPage({ message, filter = "" }) {
     return () => {
       clearTimeout(timer);
     };
-}, [filter, query, pathname]);
-
+  }, [filter, query, pathname]);
 
   return (
     <Row className="h-100">

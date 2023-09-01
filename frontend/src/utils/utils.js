@@ -6,7 +6,11 @@ export const fetchMoreData = async (resource, setResource) => {
     setResource((prevResource) => ({
       ...prevResource,
       next: data.next,
-      results: [...prevResource.results, ...data.results],
+      results: data.results.reduce((acc, cur) => {
+        return acc.some((accResult) => accResult.id === cur.id)
+          ? acc
+          : [...acc, cur];
+      }, prevResource.results),
     }));
   } catch (err) {
     console.error("Error fetching more data:", err.response ? err.response.data : err.message);
