@@ -43,8 +43,10 @@ ALLOWED_HOSTS = [
 ]
 
 # CORS Configurations
+CLIENT_ORIGIN = os.environ.get('CLIENT_ORIGIN', '')
+
 CORS_ALLOWED_ORIGINS = [
-    os.environ.get('CLIENT_ORIGIN')
+    CLIENT_ORIGIN
 ]
 
 CORS_ALLOW_CREDENTIALS = True
