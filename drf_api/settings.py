@@ -38,7 +38,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-    'localhost',
+    'localhost', '8000-megwana-backendhf-icm8dxu42be.ws-eu104.gitpod.io',
 ]
 
 # CORS Configurations
