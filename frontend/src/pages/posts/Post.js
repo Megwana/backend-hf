@@ -1,7 +1,12 @@
 import React from "react";
 import styles from "../../styles/Post.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
+
+import Card from "react-bootstrap/Card";
+import Media from "react-bootstrap/Media";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
+
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -16,6 +21,8 @@ const Post = (props) => {
     comments_count,
     likes_count,
     like_id,
+    dislikes_count,
+    dislike_id,
     title,
     content,
     image,
@@ -37,10 +44,11 @@ const Post = (props) => {
       await axiosRes.delete(`/posts/${id}/`);
       history.goBack();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
+  // Handle Like
   const handleLike = async () => {
     try {
       const { data } = await axiosRes.post("/likes/", { post: id });
@@ -53,7 +61,7 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -69,7 +77,41 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
+    }
+  };
+
+  // Handle dislike
+  const handleDislike = async () => {
+    try {
+      const { data } = await axiosRes.post("/dislikes/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, dislikes_count: post.dislikes_count + 1, dislike_id: data.id }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      // console.log(err);
+    }
+  };
+
+  // Handle undislike
+  const handleUndislike = async () => {
+    try {
+      await axiosRes.delete(`/dislikes/${dislike_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, dislikes_count: post.dislikes_count - 1, dislike_id: null }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      // console.log(err);
     }
   };
 
@@ -123,6 +165,31 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
           {likes_count}
+          // Dislike functionality
+          {is_owner ? (
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>You can't dislike your own post!</Tooltip>}
+            >
+              <i className="far fa-thumbs-down" />
+            </OverlayTrigger>
+          ) : dislike_id ? (
+            <span onClick={handleUndislike}>
+              <i className={`fas fa-thumbs-down ${styles.ThumbsDown}`} />
+            </span>
+          ) : currentUser ? (
+            <span onClick={handleDislike}>
+              <i className={`far fa-thumbs-down ${styles.ThumbsDownOutline}`} />
+            </span>
+          ) : (
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Log in to dislike posts!</Tooltip>}
+            >
+              <i className="far fa-thumbs-down" />
+            </OverlayTrigger>
+          )}
+          {dislikes_count} {/*Displays dislike count*/}
           <Link to={`/posts/${id}`}>
             <i className="far fa-comments" />
           </Link>
