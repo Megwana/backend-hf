@@ -136,7 +136,6 @@ const Post = (props) => {
               }),
           }));
       } catch (err) {
-          console.log(err);
       }
   };
 
@@ -219,14 +218,28 @@ const Post = (props) => {
             <i className="far fa-comments" />
           </Link>
           {comments_count}
-          {bookmark_id ? (
-              <span onClick={handleUnbookmark}>
-                  <i className="fas fa-bookmark" />
-              </span>
+          {isOwner ? (
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>You can't bookmark your own post!</Tooltip>}
+            >
+              <i className="far fa-bookmark" />
+            </OverlayTrigger>
+          ) : bookmark_id ? (
+            <span onClick={handleUnbookmark}>
+              <i className={`fas fa-bookmark ${styles.Bookmark}`} />
+            </span>
+          ) : currentUser ? (
+            <span onClick={handleBookmark}>
+              <i className={`far fa-bookmark ${styles.BookmarkOutline}`} />
+            </span>
           ) : (
-              <span onClick={handleBookmark}>
-                  <i className="far fa-bookmark" />
-              </span>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Log in to bookmark posts!</Tooltip>}
+            >
+              <i className="far fa-bookmark" />
+            </OverlayTrigger>
           )}
         </div>
       </Card.Body>

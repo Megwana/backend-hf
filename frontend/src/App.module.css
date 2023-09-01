@@ -32,7 +32,7 @@
   }
   
   a {
-    color: #555555;
+    color: #353535;
     transition: color ease-in-out 0.3s;
   }
   
@@ -50,7 +50,7 @@
   }
   
   i {
-    color: #cfced3;
+    color: #202020;
     font-size: 1.6rem;
     padding: 7px;
     vertical-align: middle;

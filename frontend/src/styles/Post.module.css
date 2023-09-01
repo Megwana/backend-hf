@@ -34,3 +34,21 @@
   .ThumbsDownOutline:hover {
       color: #ff2121; /* Color on hover when the post hasn't been disliked */
   }
+
+  /* Bookmark.module.css */
+.Bookmark {
+  color: gold; /* Color when the post is bookmarked */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.BookmarkOutline {
+  color: grey; /* Color when the post is not bookmarked */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.Bookmark:hover,
+.BookmarkOutline:hover {
+  color: rgb(213, 156, 12); /* Color on hover */
+}
