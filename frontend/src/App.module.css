@@ -41,7 +41,7 @@
   }
   
   a:hover i {
-    color: #2142b2;
+    color: #ff2121;
     transition: color ease-in-out 0.3s;
   }
   
@@ -59,7 +59,7 @@
   i:hover {
     cursor: pointer;
     transition: color ease-in-out 0.3s;
-    color: #2142b2;
+    color: #ff2121;
   }
   
   figure {
@@ -78,5 +78,5 @@
     background: #888;
   }
   *::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #484848;
   }
