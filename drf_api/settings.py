@@ -34,20 +34,19 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-    'localhost', '8000-megwana-backendhf-icm8dxu42be.ws-eu104.gitpod.io',
+    'localhost',
+    'hot-feet-86e6050a3b3d.herokuapp.com',
 ]
 
 # CORS Configurations
-CORS_ALLOWED_ORIGINS = [
-    os.environ.get('CLIENT_ORIGIN')
-]
+if "CLIENT_ORIGIN" in os.environ:
+    CORS_ALLOWED_ORIGINS = [os.environ.get("CLIENT_ORIGIN")]
+
 CORS_ALLOW_CREDENTIALS = True
-# CORS_ALLOW_METHODS = ["GET", "POST"]
-# CORS_ALLOW_HEADERS = ["Origin"]
 
 # Application definition
 

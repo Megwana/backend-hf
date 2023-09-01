@@ -1,4 +1,7 @@
+# External
 from django.db import models
+
+# Internal
 from django.contrib.auth.models import User
 
 
