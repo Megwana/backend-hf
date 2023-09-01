@@ -111,15 +111,38 @@ const Post = (props) => {
     }
   };
 
-  // {bookmark_id ? (
-  //     <span onClick={handleUnbookmark}>
-  //         <i className="fas fa-bookmark" /> {/* Filled Bookmark icon for bookmarked posts */}
-  //     </span>
-  // ) : (
-  //     <span onClick={handleBookmark}>
-  //         <i className="far fa-bookmark" /> {/* Outline Bookmark icon for unbookmarked posts */}
-  //     </span>
-  // )}
+  const handleBookmark = async () => {
+    try {
+        const { data } = await axiosRes.post("/bookmarks/", { post: id });
+        setPosts((prevPosts) => ({
+            ...prevPosts,
+            results: prevPosts.results.map((post) => {
+                return post.id === id
+                    ? { ...post, bookmark_id: data.id }
+                    : post;
+            }),
+        }));
+    } catch (err) {
+        console.log(err);
+    }
+  };
+
+  const handleUnbookmark = async () => {
+      try {
+          await axiosRes.delete(`/bookmarks/${bookmark_id}/`);
+          setPosts((prevPosts) => ({
+              ...prevPosts,
+              results: prevPosts.results.map((post) => {
+                  return post.id === id
+                      ? { ...post, bookmark_id: null }
+                      : post;
+              }),
+          }));
+      } catch (err) {
+          console.log(err);
+      }
+  };
+
     
   return (
     <Card className={styles.Post}>
@@ -144,7 +167,6 @@ const Post = (props) => {
         <Card.Img src={image} alt={title} />
       </Link>
       <Card.Body>
-  0 or '0'
         {'0' && <Card.Title className="text-center">{title}</Card.Title>}
         {content ? <Card.Text>{content}</Card.Text> : null}
         <div className={styles.PostBar}>
@@ -172,7 +194,6 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
           {likes_count}
-          // Dislike functionality
           {isOwner ? (
             <OverlayTrigger
               placement="top"
@@ -196,11 +217,20 @@ const Post = (props) => {
               <i className="far fa-thumbs-down" />
             </OverlayTrigger>
           )}
-          {dislikes_count} {/*Displays dislike count*/}
+          {dislikes_count}
           <Link to={`/posts/${id}`}>
             <i className="far fa-comments" />
           </Link>
           {comments_count}
+          {bookmark_id ? (
+              <span onClick={handleUnbookmark}>
+                  <i className="fas fa-bookmark" />
+              </span>
+          ) : (
+              <span onClick={handleBookmark}>
+                  <i className="far fa-bookmark" />
+              </span>
+          )}
         </div>
       </Card.Body>
     </Card>

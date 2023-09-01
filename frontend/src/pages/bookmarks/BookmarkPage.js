@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { axiosRes } from "../../api/axiosDefaults";
+import Post from '../posts/Post';
 
 function BookmarkPage() {
     const [bookmarkedPosts, setBookmarkedPosts] = useState([]);
@@ -18,14 +19,13 @@ function BookmarkPage() {
     }, []);
 
     return (
-        <div>
-            {bookmarkedPosts.map((bookmark) => (
-                <div key={bookmark.id}>
-                    <p>{bookmark.post.title}</p>
-                </div>
-            ))}
-        </div>
+      <div>
+        {bookmarkedPosts.map((bookmark) => (
+          <Post key={bookmark.post.id} {...bookmark.post} />
+        ))}
+      </div>
     );
+  
 }
 
 export default BookmarkPage;
