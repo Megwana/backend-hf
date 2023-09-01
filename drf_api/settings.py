@@ -38,6 +38,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
+    '127.0.0.1:8000',
     'localhost',
     'hot-feet-86e6050a3b3d.herokuapp.com',
 ]
@@ -48,8 +49,6 @@ CLIENT_ORIGIN = os.environ.get('CLIENT_ORIGIN', '')
 CORS_ALLOWED_ORIGINS = [
     CLIENT_ORIGIN
 ]
-
-CORS_ALLOW_CREDENTIALS = True
 
 # Application definition
 
@@ -222,3 +221,8 @@ WHITENOISE_ROOT = BASE_DIR / 'staticfiles' / 'build'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = [
+    'https://localhost:8080',
+]
