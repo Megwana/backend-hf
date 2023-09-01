@@ -1,10 +1,39 @@
-# HotFeet Backend
+# HotFeet Backend & Frontend
 
-## HotFeet Project Description
+## Project Description
 
-This repository hold the API for the full stack application HotFeet. This website is for running shoe enthusiasts who can share their own posts and see other users posts about running shoes. And interact with posts and users by liking, disliking, commenting and bookmarking posts; and following one another. It is built using Django and Django Rest Framework.
+This repository hold the API for the full stack application HotFeet. This website is for running shoe enthusiasts who can share their own posts and see other users posts about running shoes. And interact with posts and users by liking, disliking, commenting and bookmarking posts; and following one another. It is built using Django, Django Rest Framework and React.
+
+> Link to the backend repository (...)
 
 ## Contents
+
+- [HotFeet Backend](#crep-chat-backend)
+  - [Project Description](#project-description)
+  - [Contents](#contents)
+  - [Main Technologies](#main-technologies)
+  - [User Stories](#user-stories)
+    - [Profile](#profile)
+    - [Posts](#posts)
+    - [Comments](#comments)
+    - [Likes](#likes)
+    - [Dislikes](#dislikes)
+    - [Bookmarks](#bookmarks)
+    - [Followers](#followers)
+  - [Entity Relationship Diagram](#entity-relationship-diagram)
+  - [Models and CRUD breakdown](#models-and-crud-breakdown)
+  - [Development Process](#development-process)
+    - [Current Features](#current-features)
+  - [Tests](#tests)
+    - [Post Tests](#post-tests)
+    - [Manual Tests](#manual-tests)
+  - [Deployment Process](#deployment-process)
+  
+## Main Technologies
++ HTML, CSS, JavaScript
++ React.js
++ Bootstrap.js
++ Django REST Framework
 
 ## User Stories
 
@@ -71,8 +100,34 @@ This repository hold the API for the full stack application HotFeet. This websit
 | comments  | comments/ comments/:id/   | yes           | yes      | yes    | yes    | post               | no             |
 | followers | followers/ followers/:id/ | yes           | yes      | no     | yes    | no                 | no             |
 
-## Main Technologies
-+ HTML, CSS, JavaScript
-+ React.js
-+ Bootstrap.js
-+ Django REST Framework
+
+## Development Process
+
+### Current Features
+
+## Tests
+
+### Post Tests
+
+### Manual Tests
+
+## Deployment Process
+<!-- Document the deployment process for the Front-End application in the README file for the Front-End application.
+
+Implement manual testing and document the procedures and results in the README file for the Front-End application.
+
+Demonstrate an understanding of the React architecture by documenting the reuse of components in the README file for the Front-End application.
+
+Document the UX design work undertaken for the Front-End application, including any wireframes, mockups, diagrams, etc., created as part of the design process and its reasoning. Include diagrams created as part of the design process and demonstrate that these have been followed through to implementation.
+
+Describe what you set out to achieve in creating this application (project goals).
+
+Document all User Stories and map them to the project goals in the README file for the Front-End application.
+
+Document Front-End libraries you have used for specific features included in the application and justify your choice in the README file for the Front-End application.
+
+PEP8 style guide.
+
+TWO custom models (excluding user and profile models).
+
+Implement manual testing and document the procedures and results in the README file for the Back-End application. -->
