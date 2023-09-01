@@ -12,13 +12,25 @@
   }
   
   .Heart {
-    color: #f85032;
+    color: #f85032; /* Color when the post is disliked by the user */
   }
   
   .Heart:hover {
-    color: #2142b2;
+    color: #2142b2; /* Color on hover */
   }
   
   .HeartOutline:hover {
-    color: #f85032;
+    color: #f85032; /* Color on hover when the post hasn't been disliked */
+  }
+
+  .ThumbsDown {
+    color: #2142b2; /* Color when the post is disliked by the user */
+  }
+
+  .ThumbsDown:hover {
+      color: #f85032; /* Color on hover */
+  }
+
+  .ThumbsDownOutline:hover {
+      color: #2142b2; /* Color on hover when the post hasn't been disliked */
   }
