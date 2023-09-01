@@ -23,6 +23,7 @@ const Post = (props) => {
     like_id,
     dislikes_count,
     dislike_id,
+    bookmark_id,
     title,
     content,
     image,
@@ -32,7 +33,7 @@ const Post = (props) => {
   } = props;
 
   const currentUser = useCurrentUser();
-  const is_owner = currentUser?.username === owner;
+  const isOwner = currentUser?.username === owner;
   const history = useHistory();
 
   const handleEdit = () => {
@@ -44,7 +45,6 @@ const Post = (props) => {
       await axiosRes.delete(`/posts/${id}/`);
       history.goBack();
     } catch (err) {
-      // console.log(err);
     }
   };
 
@@ -61,7 +61,6 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      // console.log(err);
     }
   };
 
@@ -77,7 +76,6 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      // console.log(err);
     }
   };
 
@@ -94,7 +92,6 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      // console.log(err);
     }
   };
 
@@ -111,10 +108,19 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      // console.log(err);
     }
   };
 
+  // {bookmark_id ? (
+  //     <span onClick={handleUnbookmark}>
+  //         <i className="fas fa-bookmark" /> {/* Filled Bookmark icon for bookmarked posts */}
+  //     </span>
+  // ) : (
+  //     <span onClick={handleBookmark}>
+  //         <i className="far fa-bookmark" /> {/* Outline Bookmark icon for unbookmarked posts */}
+  //     </span>
+  // )}
+    
   return (
     <Card className={styles.Post}>
       <Card.Body>
@@ -125,7 +131,7 @@ const Post = (props) => {
           </Link>
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
-            {is_owner && postPage && (
+            {isOwner && postPage && (
               <MoreDropdown
                 handleEdit={handleEdit}
                 handleDelete={handleDelete}
@@ -138,10 +144,11 @@ const Post = (props) => {
         <Card.Img src={image} alt={title} />
       </Link>
       <Card.Body>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
-        {content && <Card.Text>{content}</Card.Text>}
+  0 or '0'
+        {'0' && <Card.Title className="text-center">{title}</Card.Title>}
+        {content ? <Card.Text>{content}</Card.Text> : null}
         <div className={styles.PostBar}>
-          {is_owner ? (
+          {isOwner ? (
             <OverlayTrigger
               placement="top"
               overlay={<Tooltip>You can't like your own post!</Tooltip>}
@@ -166,7 +173,7 @@ const Post = (props) => {
           )}
           {likes_count}
           // Dislike functionality
-          {is_owner ? (
+          {isOwner ? (
             <OverlayTrigger
               placement="top"
               overlay={<Tooltip>You can't dislike your own post!</Tooltip>}

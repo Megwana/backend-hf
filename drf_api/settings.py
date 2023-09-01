@@ -41,7 +41,6 @@ ALLOWED_HOSTS = [
     'localhost',
 ]
 
-
 CORS_ALLOWED_ORIGINS = [
     os.environ.get('CLIENT_ORIGIN')
 ]
@@ -95,18 +94,18 @@ if 'DEV' not in os.environ:
         'rest_framework.renderers.JSONRenderer',
     ]
 
-SIMPLE_JWT = {
-    'ALGORITHM': 'HS256',
-    'SIGNING_KEY': os.environ.get('JWT_SIGNING_KEY', 'SECRET_KEY'),
-    'VERIFYING_KEY': None,
-    'ROTATE_REFRESH_TOKENS': False,
-    'AUTH_HEADER_TYPES': ('Bearer',),
-}
+# SIMPLE_JWT = {
+#     'ALGORITHM': 'HS256',
+#     'SIGNING_KEY': os.environ.get('JWT_SIGNING_KEY', 'SECRET_KEY'),
+#     'VERIFYING_KEY': None,
+#     'ROTATE_REFRESH_TOKENS': False,
+#     'AUTH_HEADER_TYPES': ('Bearer',),
+# }
 
 
 REST_USE_JWT = True
-JWT_AUTH_COOKIE = 'my-app-auth'
 JWT_AUTH_SECURE = True
+JWT_AUTH_COOKIE = 'my-app-auth'
 JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 JWT_AUTH_SAMESITE = 'None'
 
@@ -117,7 +116,6 @@ REST_AUTH_SERIALIZERS = {
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
