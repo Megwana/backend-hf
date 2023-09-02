@@ -4,8 +4,7 @@ from django.views.generic import TemplateView
 from .views import logout_route, root_route
 
 urlpatterns = [
-    path('', root_route),
-    # path('', TemplateView.as_view(template_name='index.html')),
+    path('', TemplateView.as_view(template_name='index.html')),
     path('admin/', admin.site.urls),
     path('api/api-auth/', include('rest_framework.urls')),
     # Logout route has to be above the default one to be matched first

@@ -41,6 +41,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1:8000',
     'localhost',
     'hot-feet-86e6050a3b3d.herokuapp.com',
+    '8080-megwana-backendhf-icm8dxu42be.ws-eu104.gitpod.io'
 ]
 
 # CORS Configurations
