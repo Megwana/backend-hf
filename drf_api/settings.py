@@ -99,15 +99,6 @@ if 'DEV' not in os.environ:
         'rest_framework.renderers.JSONRenderer',
     ]
 
-# SIMPLE_JWT = {
-#     'ALGORITHM': 'HS256',
-#     'SIGNING_KEY': os.environ.get('JWT_SIGNING_KEY', 'SECRET_KEY'),
-#     'VERIFYING_KEY': None,
-#     'ROTATE_REFRESH_TOKENS': False,
-#     'AUTH_HEADER_TYPES': ('Bearer',),
-# }
-
-
 REST_USE_JWT = True
 JWT_AUTH_SECURE = True
 JWT_AUTH_COOKIE = 'my-app-auth'
