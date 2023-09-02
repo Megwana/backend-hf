@@ -23,11 +23,8 @@ This repository hold the API for the full stack application HotFeet. This websit
   - [Entity Relationship Diagram](#entity-relationship-diagram)
   - [Models and CRUD breakdown](#models-and-crud-breakdown)
   - [Development Process](#development-process)
-    - [Current Features](#current-features)
   - [Tests](#tests)
     - [Post Tests](#post-tests)
-    - [Manual Tests](#manual-tests)
-  - [Deployment Process](#deployment-process)
   
 ## Main Technologies
 + HTML, CSS, JavaScript
@@ -85,7 +82,6 @@ This repository hold the API for the full stack application HotFeet. This websit
 ## Entity Relationship Diagram
 
 ![ERD Diagram](https://github.com/Megwana/backend-hf/assets/106391440/7807490b-d2ad-4cdf-b810-57defd04aeb6)
->>>>>>> 350e77351db3de175311c4057b4c5980325136d6
 
 ## Models and CRUD breakdown
 
@@ -100,32 +96,6 @@ This repository hold the API for the full stack application HotFeet. This websit
 | comments  | comments/ comments/:id/   | yes           | yes      | yes    | yes    | post               | no             |
 | followers | followers/ followers/:id/ | yes           | yes      | no     | yes    | no                 | no             |
 
-
-## Development Process
-
-### Current Features
-
-Logo:
-
-Navbar:
-
-
-Authentication:
-- sign up
-- sign in 
-- sign out 
-Posts:
-
-Liked:
-
-Bookmarks:
-
-Feed:
-
-Profile:
-
-Most followed:
-
 CRUD:
 
 ## Tests
@@ -134,7 +104,203 @@ CRUD:
 
 Testing for posts was carried out on the backend. The link to view this can be seen [here](posts/tests.py)
 
-### Manual Tests
+# Frontend
+
+## Frontend Contents
+- [Fronted README](#frontend)
+  - [Frontend Contents](#frontend-contents)
+  - [UX Design](#contents)
+    - [Strategy Plane](#strategy-plane)
+    - [Scope Plane](#scope-plane)
+    - [Structure Plane](#structure-plane)
+      - [User Stories Frontend](#user-stories-frontend)
+    - [Skeleton Plane](#skeleton-plane)
+      - [Wireframes](#wireframes)
+      - [Colour Scheme](#colour-scheme)
+      - [Typography](#typography)
+      - [Current Features Frontend](#current-features-frontend)
+    - [Technology Used](#technology-used)
+    - [Deployment](#deployment)
+    - [Credit & Acknowledgments](#credit-and-acknowledgments)
+
+
+## UX Design
+
+### Strategy Plane
+
+  - My goal for this site is to create a social media platform specifically for running shoes. There are a lot of review sites out there giving long lengthy details about all the different running shoes. However, the running community is vast and everybody wants to share their actual real life experience with a pair of running shoes as everyone is different.
+
+  - Platforms like Instagram are so over stimulated to a variety of topics. Running shoes and exercise is still very popular but a site like HotFeet gives space for a large community to focus on what they are interested in and see content they want instead of everything under the sun. 
+
+  - My Target audience is any age range that has a passion and interest in collecting, using and seeing running shoes. 
+
+  - The Athletic footwear industry amounts to US$52.98bn. This is a running shoe specific site but after some future expansion it could be athletic footwear as a whole [See Statics Here](https://www.statista.com/outlook/cmo/footwear/athletic-footwear/worldwide).
+
+### Scope Plane
+
+In order to manage the workload, I have divided my focus into three categories, depending on their overall importance to reaching a **minimum viable product (MVP).**
+
+- Must Have
+
+  Account Authenitcation
+  - Profile page
+  - All posts feed
+  - User posts
+  - Liked post feed
+  - Followed user feed
+  - User followed
+  - User comments
+  - User likes
+
+- Should Have
+
+  - Infinite scroll
+  - Dislike Button
+  - View All Likes in on place
+
+- Could Have
+
+  - Bookmark for individual products
+  - View all bookmarks in one place
+  - User permission levels, user/admin/visitor
+  - Search by brand category - Nike, Saucony, Brooks
+
+## Structure Plane
+
+### User Stories Frontend
+
+Profile
+- As a user, I can create a profile, so that I can have a username and profile picture when logged in.
+- As a user, I can edit my profile, so that I can change my picture and other details when I want to.
+- As a user, I can view mine and other's profiles so I can see what people are up to, and vice versa.
+
+Posts
+- As a user, I can create a post, to share my pictures with other users.
+- As a user, I can edit a post, so that I can change the details of a post I created.
+- As a user, I can delete a post, if I decide I don't want to share it any longer.
+- As a user, I can view all of my posts, so that I can see everything I've created in one place.
+- As a user, I can see the most liked posts, so that I can discover other users and what's popular.
+- As a visitor, I can see the most recent posts, so I can find out whether I like the site or not.
+
+Comments
+
+- As a user, I can leave a comment on posts, so that I can talk to other users and share what I think of their posts.
+- As a user, I can edit my comment, so that if I make a mistake, I can fix it.
+- As a user, I can delete my comment, in case I decide that I don't want to comment any more.
+
+Likes
+
+- As a user, I can like posts, so that I can quickly leave positive feedback on other's posts.
+- As a user, I can unlike a post, in case I change my mind or click it by accident.
+- As a user I can view the total likes on each of my posts when I click on them, to see how popular they are.
+
+Dislikes
+
+- As a user, I can dislike posts, so that I can quickly leave negative feedback on other's posts.
+- As a user, I can un-dislike a post, in case I change my mind or click it by accident.
+- As a user I can view the total dislikes on each of my posts when I click on them, to see how popular they are.
+
+Bookmarks
+
+- As a user, I can bookmark posts, so that I can keep a log of specific posts I have take an interest in. 
+- As a user, I can unbookmark a post, in case I change my mind or click it by accident.
+
+Followers
+
+- As a user, I can follow other users, so that I can see more of their content.
+- As a user, I can unfollow other users, so that I don't have to see their posts any more.
+- As a user, I can see a feed of only the users that I follow, so that I can filter the content that I enjoy the most.
+- As a user, I can see how many followers I have, and how many people I follow, so that I can see how my profile is growing and how many people I'm connected to.
+
+## Skeleton Plane
+
+### Wireframes
+
+All my wireframes can be seen below giving a general sense of the websites structure in all size forms. Whether it be mobile, ipad or desktop.
+
+This is what the general structure of the main home page will look like:
+
+![Balsmaq1](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693647945/Balsamiq-wireframe_zrilji.png)
+
+This is what the authenitcation pages will look like:
+![Balsamiq2](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693647944/auth-page_rwgwsy.png)
+
+This is what the Post add and edit etc will look like:
+![Balsamiq3](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693647944/Create-Post-Frame_kwhz1x.png)
+
+### Colour Scheme
+
+I wanted to keep the colour scheme very simple and clean given that running/ running shoes can be an interest for all ages etc. 
+
+There for I have gone with a very simple monotone colour scheme with on bright red as the signalling colour. I chose red to represent the 'hot' in hotfeet. The name hotfeet is meant to represent people being 'hot' / 'passionate' about the topic. Furthermore it is meant to be a play on words for both a 'hot topic' in a social platform and 'hot' feet for all the fast runners out there.
+
+![ColourScheme](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693648219/ColourScheme_fqk5sv.png)
+
+### Typography
+
+I have chosen a font that is easy to read but also has a strong bold presence. 
+
+`font-family: 'ADLaM Display', cursive`
+
+I aquired this font using Google Fonts.
+
+### Current Features Frontend
+
+Logo:
+This is the websites logo, designed as a running person. When clicked it will revert a user to the home page.
+
+![Logo](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693644441/logo-home_wdtad7.png)
+
+Sign Up:
+This is the sign up page where users can sign up and once they do this it will revert them to the sign in page. 
+![SignUp](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693644444/sign-up_kbmqzs.png)
+
+An additional feature is that in case they already have a log in, they can click this link below to take them there.
+![SingInLink](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693644441/revert-signin_nv3h4s.png)
+
+Sign In:
+The is the sign in page. Both the sign in and up forms are set to give messages if a users try's to submit the information blank, a typo of information or their password is not strong enough or not the same etc. 
+![SignIn](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693644441/signin-error_xskznk.png)
+
+NavBar:
+
+The Navbar presents differently depending on whether a user is signed in or out. If a user is not signed in, then they will not have the ability to post, like and comment etc. 
+![NavBarSignedIn](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693644441/navbar_zbcnbn.png)
+![NavBarSignedOut](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693644441/signed-out-nav_krz8h5.png)
+
+Here is an example below of instances where a visitor will be reminded they need to sign in if they want to like a post etc.
+
+![LogtoLike](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693645038/logtolike_i8ro0u.png)
+![LogtoDislike](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693645038/logtodislike_b2djly.png)
+![LogtoBookmark](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693645038/logtobookmark_vpxuno.png)
+
+## Technology Used:
+
+[Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=Cj0KCQjwusunBhCYARIsAFBsUP-gDW29z3R77OhQlYdhypOTWE6HlyxD1Vbm031R_Z0JycdKz6kJEd8aAmHEEALw_wcB)
+
+[ColourWheel](https://color.adobe.com/create/color-wheel)
+
+[ReactBootstrap](https://react-bootstrap.github.io/docs/getting-started/introduction/)
+
+[Heroku](https://dashboard.heroku.com)
+
+[DjangoRestFramework](https://www.django-rest-framework.org/)
+
+[React](https://react.dev/)
+
+[GoogleFonts](https://fonts.google.com/)
+
+[Cloudinary](https://cloudinary.com/)
+
+[ElephantSQL](https://www.elephantsql.com/)
+
+[Axios](https://www.npmjs.com/package/axios)
+
+[React-router-dom](https://www.npmjs.com/package/react-router-dom)
+
+[Popper](https://popper.js.org/)
+
+## Deployment
 
 ## Deployment Process
 
@@ -164,7 +330,7 @@ Testing for posts was carried out on the backend. The link to view this can be s
    - The first line is to ensure that migrations are created and applied to the Heroku postgres database.
    - The second line tells Heroku to serve our app using gunicorn.
 
-10. Set the ALLOWED_HOSTS in settings.py
+10. Set the ALLOWED_HOSTS and ClIENT_ORIGIN in settings.py
 
 11. In settings.py, update the CORS_ALLOWED_ORIGINS to match your desired project.
 
@@ -178,43 +344,24 @@ Testing for posts was carried out on the backend. The link to view this can be s
 
 17. Update the requirements.txt file to ensure the deployment doesn't fail by writing in the terminal "pip3 freeze --local > requirements.txt"
 
-18. Git Add, Commit and Push all your changes to GitHub
+18. Create a runtime.txt file containing `python-3.9.16`. 
 
-19. Click the Deploy button under the deploy tab in your heroku app. 
+19. Add, commit and Push your changes to GitHub
 
-<!-- <!-- Document the UX design work undertaken for the Front-End application, including any wireframes, mockups, diagrams, etc., created as part of the design process and its reasoning. Include diagrams created as part of the design process and demonstrate that these have been followed through to implementation.
+20. Go to the deploy tab in Heroku and Click 'Deploy Branch'.
 
-Document all User Stories and map them to the project goals in the README file for the Front-End application.
+21. Wait for your build to complete (If you want, you can also click “view build log” to watch the process in a larger window)
 
-Document Front-End libraries you have used for specific features included in the application and justify your choice in the README file for the Front-End application.
+22. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top right of the page.
 
-PEP8 style guide. -->
+23. Well done, you have successfully deployed your project to Heroku! 
 
-# Frontend
+## Credit and Acknowledgments
 
-## Frontend Contents
-- [Fronted README](#frontend)
-  - [Frontend Contents](#frontend-contents)
-  - [UX Design](#contents)
-  - [Main Technologies](#main-technologies)
-  - [User Stories](#user-stories)
-    - [Profile](#profile)
-    - [Posts](#posts)
-    - [Comments](#comments)
-    - [Likes](#likes)
-    - [Dislikes](#dislikes)
-    - [Bookmarks](#bookmarks)
-    - [Followers](#followers)
-  - [Entity Relationship Diagram](#entity-relationship-diagram)
-  - [Models and CRUD breakdown](#models-and-crud-breakdown)
-  - [Development Process](#development-process)
-    - [Current Features](#current-features)
-  - [Tests](#tests)
-  - [Deployment Process](#deployment-process)
+- Code institute for the general structure and using the DRF and Moments lessons to use and build the structure of this project.
 
+- My mentor Akshat for general advice. 
 
-  ## UX Design
+- Tom Ainsworth Alumni for giving a sense of direction and advice on not making it too complicated (listening to Q&A on slack). 
 
-  ### Strategy Plane
-
-  - My goal for this site is to create a social media platform specifically for running shoes. There are a lot of review sites out there giving long lengthy details about all the different running shoes. However, the running community is vast and everybody wants to share their actual real life experience with a pair of running shoes as everyone is different.
+- My Friends and Family for all their love and support. 
