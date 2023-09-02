@@ -1,5 +1,7 @@
 # HotFeet Backend & Frontend
 
+# Backend REAMEME
+
 ## Project Description
 
 This repository hold the API for the full stack application HotFeet. This website is for running shoe enthusiasts who can share their own posts and see other users posts about running shoes. And interact with posts and users by liking, disliking, commenting and bookmarking posts; and following one another. It is built using Django, Django Rest Framework and React.
@@ -7,8 +9,6 @@ This repository hold the API for the full stack application HotFeet. This websit
 > Link to the backend repository (...)
 
 ## Contents
-
-- [HotFeet Backend](#crep-chat-backend)
   - [Project Description](#project-description)
   - [Contents](#contents)
   - [Main Technologies](#main-technologies)
@@ -105,29 +105,116 @@ This repository hold the API for the full stack application HotFeet. This websit
 
 ### Current Features
 
+Logo:
+
+Navbar:
+
+
+Authentication:
+- sign up
+- sign in 
+- sign out 
+Posts:
+
+Liked:
+
+Bookmarks:
+
+Feed:
+
+Profile:
+
+Most followed:
+
+CRUD:
+
 ## Tests
 
 ### Post Tests
 
+Testing for posts was carried out on the backend. The link to view this can be seen [here](posts/tests.py)
+
 ### Manual Tests
 
 ## Deployment Process
-<!-- Document the deployment process for the Front-End application in the README file for the Front-End application.
 
-Implement manual testing and document the procedures and results in the README file for the Front-End application.
+1. Log in or create an account on Heroku [Heroku.com](https://www.heroku.com/)
 
-Demonstrate an understanding of the React architecture by documenting the reuse of components in the README file for the Front-End application.
+2. Create a new app (e.g. this project's heroku app is called hot-feet). This app name must be unique, then select your region. 
 
-Document the UX design work undertaken for the Front-End application, including any wireframes, mockups, diagrams, etc., created as part of the design process and its reasoning. Include diagrams created as part of the design process and demonstrate that these have been followed through to implementation.
+3. Select `Create app`.
 
-Describe what you set out to achieve in creating this application (project goals).
+4. Under resources tab search for Postgres in Add-ons section, and add Heroku Postgres to the app. Choose the 'hobby' plan for a free plan. PostgreSQL 'DATABASE_URL' will be added to the app Config Vars.
+
+5. Install the libraries dj-database-url and psycopg2 `pip3 install dj_database_url psycopg2`
+
+6. In settings.py file import dj_database_url
+
+7. In settings.py add the following if statement to the 'DATABASES' variable. This is to keep the development and production environments and their databases separate.
+
+8. Install `pip3 install django-cors-headers` and configure it in settings.py to your specifications. Ensure you add `'corsheaders.middleware.CorsMiddleware'` as high as possible in the MIDDLEWARE settings.
+
+9. Pip install gunicorn, then create a `Procfile` in your app:
+
+   ```python
+   release: python manage.py makemigrations && python manage.py migrate
+   web: gunicorn PROJECT_NAME.wsgi
+   ```
+
+   - The first line is to ensure that migrations are created and applied to the Heroku postgres database.
+   - The second line tells Heroku to serve our app using gunicorn.
+
+10. Set the ALLOWED_HOSTS in settings.py
+
+11. In settings.py, update the CORS_ALLOWED_ORIGINS to match your desired project.
+
+12. Add JWT_AUTH_SAMESITE = 'None' to be able to have the front end app and the API deployed to different platforms.
+
+13. Add remaining environment variables settings to env.py file at the root directory. **Add this file to .gitignore and double check you have done so, this is crucial to protect sensitive information in your project.**
+
+14. Replace the insecure SECRET_KEY with the environment variable in settings.py
+
+16. Go to Settings in your Heroku and set the environment variables in the Config Vars. PostgreSQL DATABASE_URL should already be there.
+
+17. Update the requirements.txt file to ensure the deployment doesn't fail by writing in the terminal "pip3 freeze --local > requirements.txt"
+
+18. Git Add, Commit and Push all your changes to GitHub
+
+19. Click the Deploy button under the deploy tab in your heroku app. 
+
+<!-- <!-- Document the UX design work undertaken for the Front-End application, including any wireframes, mockups, diagrams, etc., created as part of the design process and its reasoning. Include diagrams created as part of the design process and demonstrate that these have been followed through to implementation.
 
 Document all User Stories and map them to the project goals in the README file for the Front-End application.
 
 Document Front-End libraries you have used for specific features included in the application and justify your choice in the README file for the Front-End application.
 
-PEP8 style guide.
+PEP8 style guide. -->
 
-TWO custom models (excluding user and profile models).
+# Frontend
 
-Implement manual testing and document the procedures and results in the README file for the Back-End application. -->
+## Frontend Contents
+- [Fronted README](#frontend)
+  - [Frontend Contents](#frontend-contents)
+  - [UX Design](#contents)
+  - [Main Technologies](#main-technologies)
+  - [User Stories](#user-stories)
+    - [Profile](#profile)
+    - [Posts](#posts)
+    - [Comments](#comments)
+    - [Likes](#likes)
+    - [Dislikes](#dislikes)
+    - [Bookmarks](#bookmarks)
+    - [Followers](#followers)
+  - [Entity Relationship Diagram](#entity-relationship-diagram)
+  - [Models and CRUD breakdown](#models-and-crud-breakdown)
+  - [Development Process](#development-process)
+    - [Current Features](#current-features)
+  - [Tests](#tests)
+  - [Deployment Process](#deployment-process)
+
+
+  ## UX Design
+
+  ### Strategy Plane
+
+  - My goal for this site is to create a social media platform specifically for running shoes. There are a lot of review sites out there giving long lengthy details about all the different running shoes. However, the running community is vast and everybody wants to share their actual real life experience with a pair of running shoes as everyone is different.
