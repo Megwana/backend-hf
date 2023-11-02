@@ -41,7 +41,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1:8000',
     'localhost',
     'hot-feet-86e6050a3b3d.herokuapp.com',
-    '8080-megwana-backendhf-icm8dxu42be.ws-eu104.gitpod.io'
+    '8080-megwana-backendhf-icm8dxu42be.ws-eu104.gitpod.io',
+    '8000-megwana-backendhf-mjkok1s6mt2.ws-eu105.gitpod.io'
 ]
 
 # CORS Configurations
@@ -65,12 +66,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'rest_framework.authtoken',
-    'dj_rest_auth',
-    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'dj_rest_auth',
     'dj_rest_auth.registration',
+    'django.contrib.sites',
     'corsheaders',
 
 
@@ -107,7 +108,7 @@ JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 JWT_AUTH_SAMESITE = 'None'
 
 REST_AUTH_SERIALIZERS = {
-    'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer'
+    'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer',
 }
 
 MIDDLEWARE = [
@@ -142,7 +143,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'drf_api.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -153,10 +153,12 @@ if 'DEV' in os.environ:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+    print('connected to sqlite3')
 else:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
+    print('connected to elephant')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
