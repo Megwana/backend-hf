@@ -22,7 +22,7 @@ class Post(models.Model):
     title = models.CharField(max_length=254, db_index=True)
     content = models.TextField(blank=True)
     image = models.ImageField(
-        upload_to='images/', default='../default_post_rgq6aq', blank=True
+        upload_to='images/', default='images/banner_rzae6b', blank=True
     )
     category = models.CharField(
         max_length=16, choices=CATEGORY_CHOICES, null=True, blank=True
