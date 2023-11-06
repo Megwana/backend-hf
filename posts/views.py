@@ -4,6 +4,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from drf_api.permissions import IsOwnerOrReadOnly
 from .models import Post
 from .serializers import PostSerializer
+from rest_framework.exceptions import ValidationError
 
 
 class PostList(generics.ListCreateAPIView):
@@ -49,6 +50,17 @@ class PostList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        owner_profile = self.request.query_params.get('owner__profile', None)
+        
+        if owner_profile is not None and owner_profile.lower() == "undefined":
+            raise ValidationError("Invalid value for 'owner__profile'")
+
+        return queryset
+    
 
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
