@@ -1,9 +1,7 @@
 from django.urls import path
-from .views import BookmarkList, BookmarkDetail
+from bookmarks import views
 
 urlpatterns = [
-    path('bookmarks/', BookmarkList.as_view(), name='bookmark-list'),
-    path(
-        'bookmarks/<int:pk>/', BookmarkDetail.as_view(), name='bookmark-detail'
-    ),
+    path('bookmarks/', views.BookmarkList.as_view()),
+    path('bookmarks/<int:pk>/', views.BookmarkDetail.as_view()),
 ]

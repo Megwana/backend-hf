@@ -42,6 +42,7 @@ const Post = (props) => {
       await axiosRes.delete(`/posts/${id}/`);
       history.goBack();
     } catch (err) {
+      console.log("Error while deleting:", err);
     }
   };
 
@@ -108,35 +109,36 @@ const Post = (props) => {
     }
   };
 
+  // Handle Bookmark
   const handleBookmark = async () => {
     try {
-        const { data } = await axiosRes.post("/bookmarks/", { post: id });
-        setPosts((prevPosts) => ({
-            ...prevPosts,
-            results: prevPosts.results.map((post) => {
-                return post.id === id
-                    ? { ...post, bookmark_id: data.id }
-                    : post;
-            }),
-        }));
+      const { data } = await axiosRes.post("/bookmarks/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, bookmark_id: data.id }
+            : post;
+        }),
+      }));
     } catch (err) {
-        console.log(err);
     }
   };
 
+  // handle Unbookmark
   const handleUnbookmark = async () => {
-      try {
-          await axiosRes.delete(`/bookmarks/${bookmark_id}/`);
-          setPosts((prevPosts) => ({
-              ...prevPosts,
-              results: prevPosts.results.map((post) => {
-                  return post.id === id
-                      ? { ...post, bookmark_id: null }
-                      : post;
-              }),
-          }));
-      } catch (err) {
-      }
+    try {
+      await axiosRes.delete(`/bookmarks/${bookmark_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, bookmark_id: null }
+            : post;
+        }),
+      }));
+    } catch (err) {
+    }
   };
 
     

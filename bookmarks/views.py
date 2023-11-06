@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from drf_api.permissions import IsOwnerOrReadOnly
-from .models import Bookmark
-from .serializers import BookmarkSerializer
+from bookmarks.models import Bookmark
+from bookmarks.serializers import BookmarkSerializer
 
 
 class BookmarkList(generics.ListCreateAPIView):
@@ -11,11 +11,11 @@ class BookmarkList(generics.ListCreateAPIView):
     Perform_create: associate the current logged-in user with a bookmark.
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    queryset = Bookmark.objects.all()
     serializer_class = BookmarkSerializer
+    queryset = Bookmark.objects.all()
 
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+        serializer.save(owner=self.request.user)
 
 
 class BookmarkDetail(generics.RetrieveDestroyAPIView):
