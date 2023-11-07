@@ -35,8 +35,8 @@
 .Blue,
 .BlueOutline:hover,
 .Bright:hover {
-  background-color: #2142b2;
-  color: #ffffff;
+  background-color: #2d3758;
+  color: aliceblue;
 }
 
 .BlueOutline,
@@ -54,11 +54,11 @@
 
 .Black:hover,
 .BlackOutline {
-  background-color: aliceblue;
-  color: #2d3758;
+  background-color: #ca1717;
+  color: aliceblue;
 }
 
 .Bright {
-  background-color: #2ed9ff;
-  color: #b22121;
+  background-color: #ca1717;
+  color: aliceblue;
 }
