@@ -34,15 +34,14 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-    '127.0.0.1:8000',
     '10.0.5.2:8081',
     'localhost',
     'hot-feet-86e6050a3b3d.herokuapp.com',
-    '8081-megwana-backendhf-mjkok1s6mt2.ws-eu105.gitpod.io/',
+    '8081-megwana-backendhf-mjkok1s6mt2.ws-eu105.gitpod.io',
     '8000-megwana-backendhf-mjkok1s6mt2.ws-eu105.gitpod.io'
 ]
 
@@ -219,5 +218,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
-    'https://localhost:8080',
+    'https://localhost:8081',
 ]
