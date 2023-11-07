@@ -446,6 +446,44 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: After step 4, the post should be removed from my bookmarks and bookmark icon goes back to grey outline and no gold.
 - Actual Results: Check that the post has been successfully unbookmarked. Works as expected.
 
+**Profile Tests**
+
+**1. Most Followed Avatar Links to their Profile Page**
+- **Description:** Test that the most followed avatar links to their profile page.
+- **Steps:**
+   1. Log in to my account.
+   2. Find the avatar of the user you want to select in Most Followed Profiles.
+   3. Click on the avatar.
+- **Expected Results:** After step 3, I should be redirected to their profile page.
+- **Actual Results:** Verify that clicking on the avatar leads to their profile page. Works as expected.
+
+**2. Three Dots in the Top Right of a Profile Opens Editing Options**
+- **Description:** Test that clicking the three dots in the top right of a profile opens editing options.
+- **Steps:**
+   1. Log in to my account.
+   2. Go to my user profile.
+   3. Locate and click the three dots icon in the top right corner.
+- **Expected Results:** After step 3, a menu with editing options should open.
+- **Actual Results:** Confirm that clicking the three dots icon displays the editing options. I can't view three dot option on other users profiles, just mine. Works as expected.
+
+**3. Clicking Edit Profile Routes to the Edit Page, Displaying My Current Profile and Bio Content**
+- **Description:** Test that clicking "Edit Profile" on my profile page routes to the edit page and displays my current profile and bio content.
+- **Steps:**
+   1. Log in to my account.
+   2. Go to my profile.
+   3. Click "Edit Profile."
+- **Expected Results:** After step 3, I should be directed to the edit page, and my current profile and bio content should be visible.
+- **Actual Results:** Confirm that clicking "Edit Profile" takes me to the edit page with my current profile and bio content displayed. Works as expected.
+
+**4. Clicking the Change Image Button Opens My OS Folders for Photo Upload**
+- **Description:** Test that clicking the "Change Image" button allows me to upload a photo from my device.
+- **Steps:**
+   1. Log in to my account.
+   2. Go to the edit profile page.
+   3. Find and click the "Change Image" button.
+- **Expected Results:** After step 3, my operating system's folders for photo upload should open.
+- **Actual Results:** Confirm that clicking "Change Image" opens my OS folders for photo upload. Once saving the picture to the user it is uploaded to cloudinary. Works as expected.
+
 ## Deployment
 
 ## Deployment Process
@@ -496,15 +534,15 @@ Here is an example below of instances where a visitor will be reminded they need
 
 https://code-institute-students.github.io/advfe-unified-workspace/deployment/00-deployment
 
-19. Add, commit and Push your changes to GitHub
+20. Add, commit and Push your changes to GitHub
 
-20. Go to the deploy tab in Heroku and Click 'Deploy Branch'.
+21. Go to the deploy tab in Heroku and Click 'Deploy Branch'.
 
-21. Wait for your build to complete (If you want, you can also click “view build log” to watch the process in a larger window)
+22. Wait for your build to complete (If you want, you can also click “view build log” to watch the process in a larger window)
 
-22. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top right of the page.
+23. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top right of the page.
 
-23. Well done, you have successfully deployed your project to Heroku! 
+24. Well done, you have successfully deployed your project to Heroku! 
 
 ## Credit and Acknowledgments
 
