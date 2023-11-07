@@ -151,7 +151,32 @@ const Post = (props) => {
             {owner}
           </Link>
           <div className="d-flex align-items-center">
-            <span>{updated_at}</span>
+            <span style={{ marginRight: '10px' }}>{updated_at}</span>
+            <span>
+              {isOwner ? (
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>You can't bookmark your own post!</Tooltip>}
+              >
+                  <i className="far fa-bookmark" />
+                </OverlayTrigger>
+              ) : bookmark_id ? (
+                <span onClick={handleUnbookmark}>
+                  <i className={`fas fa-bookmark ${styles.Bookmark}`} />
+                </span>
+              ) : currentUser ? (
+                <span onClick={handleBookmark}>
+                  <i className={`far fa-bookmark ${styles.BookmarkOutline}`} />
+                </span>
+              ) : (
+                <OverlayTrigger
+                  placement="top"
+                  overlay={<Tooltip>Log in to bookmark posts!</Tooltip>}
+                >
+                  <i className="far fa-bookmark" />
+                </OverlayTrigger>
+              )}
+            </span>
             {isOwner && postPage && (
               <MoreDropdown
                 handleEdit={handleEdit}
@@ -220,29 +245,6 @@ const Post = (props) => {
             <i className="far fa-comments" />
           </Link>
           {comments_count}
-          {isOwner ? (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>You can't bookmark your own post!</Tooltip>}
-            >
-              <i className="far fa-bookmark" />
-            </OverlayTrigger>
-          ) : bookmark_id ? (
-            <span onClick={handleUnbookmark}>
-              <i className={`fas fa-bookmark ${styles.Bookmark}`} />
-            </span>
-          ) : currentUser ? (
-            <span onClick={handleBookmark}>
-              <i className={`far fa-bookmark ${styles.BookmarkOutline}`} />
-            </span>
-          ) : (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>Log in to bookmark posts!</Tooltip>}
-            >
-              <i className="far fa-bookmark" />
-            </OverlayTrigger>
-          )}
         </div>
       </Card.Body>
     </Card>

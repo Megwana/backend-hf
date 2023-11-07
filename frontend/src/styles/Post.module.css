@@ -7,50 +7,50 @@
   }
   
   .Post figure,
-  h5 {
-    margin: 0 0;
-  }
+h5 {
+  margin: 0;
+}
   
-  .Heart {
-    color: #ff2121;
-  }
-  
-  .Heart:hover {
+.Heart {
+  color: #ff2121;
+}
+
+.Heart:hover {
+  color: #ff2121; /* Color on hover */
+}
+
+.HeartOutline:hover {
+  color: #ff2121; /* Color on hover when the post hasn't been liked */
+}
+
+.ThumbsDown {
+  color: #000000; /* Color when the post is disliked by the user */
+}
+
+.ThumbsDown:hover {
     color: #ff2121; /* Color on hover */
-  }
-  
-  .HeartOutline:hover {
-    color: #ff2121; /* Color on hover when the post hasn't been liked */
-  }
+}
 
-  .ThumbsDown {
-    color: #000000; /* Color when the post is disliked by the user */
-  }
+.ThumbsDownOutline:hover {
+    color: #ff2121; /* Color on hover when the post hasn't been disliked */
+}
 
-  .ThumbsDown:hover {
-      color: #ff2121; /* Color on hover */
-  }
-
-  .ThumbsDownOutline:hover {
-      color: #ff2121; /* Color on hover when the post hasn't been disliked */
-  }
-
-  /* Bookmark.module.css */
 .Bookmark {
-  color: rgb(194, 140, 4); /* Color when the post is bookmarked */
+  color: rgb(194, 140, 4);
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .BookmarkOutline {
-  color: grey; /* Color when the post is not bookmarked */
+  color: rgb(183, 183, 183); 
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
-
+  transition: color 0.2s ease-in-out;
 }
 
-.Bookmark:hover,
-.BookmarkOutline:hover {
-  color: rgb(194, 140, 4); /* Color on hover */
+.Bookmark:hover {
+  color: rgb(194, 140, 4);
+}
 
+.BookmarkOutline:hover {
+  color: #000000;
 }
