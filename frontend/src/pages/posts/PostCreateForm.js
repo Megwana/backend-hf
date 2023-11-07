@@ -95,7 +95,11 @@ function PostCreateForm() {
           {message}
         </Alert>
       ))}
-
+      {notification && (
+        <Alert variant="success" onClose={() => setNotification(null)} dismissible>
+          {notification}
+        </Alert>
+      )}
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
