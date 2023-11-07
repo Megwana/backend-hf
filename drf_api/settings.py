@@ -34,14 +34,15 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-    '10.0.5.2:8080',
-    'localhost:8080',
+    '127.0.0.1:8000',
+    '10.0.5.2:8081',
+    'localhost',
     'hot-feet-86e6050a3b3d.herokuapp.com',
-    '8080-megwana-backendhf-mjkok1s6mt2.ws-eu105.gitpod.io/',
+    '8081-megwana-backendhf-mjkok1s6mt2.ws-eu105.gitpod.io/',
     '8000-megwana-backendhf-mjkok1s6mt2.ws-eu105.gitpod.io'
 ]
 
@@ -153,10 +154,12 @@ if 'DEV' in os.environ:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+    print('connected to sqlite3')
 else:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
+    print('connected to elephant')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -216,5 +219,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
-    'https://localhost:8000',
+    'https://localhost:8080',
 ]
