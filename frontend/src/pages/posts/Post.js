@@ -200,18 +200,7 @@ const Post = (props) => {
         {'0' && <Card.Title className="text-center">{title}</Card.Title>}
         {content ? <Card.Text>{content}</Card.Text> : null}
         <div className={styles.PostBar}>
-          {isOwner ? (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>You can't like your own post!</Tooltip>}
-            >
-              <i className="far fa-heart" />
-            </OverlayTrigger>
-          ) : like_id ? (
-            <span onClick={handleUnlike}>
-              <i className={`fas fa-heart ${styles.Heart}`} />
-            </span>
-          ) : currentUser ? (
+          {currentUser ? (
             <OverlayTrigger
             placement="top"
             overlay={
@@ -235,19 +224,7 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
           {likes_count}
-          {isOwner ? (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>You can't dislike your own post!</Tooltip>}
-            >
-              <i className="far fa-thumbs-down" />
-            </OverlayTrigger>
-            
-          ) : dislike_id ? (
-            <span onClick={handleUndislike}>
-              <i className={`fas fa-thumbs-down ${styles.ThumbsDown}`} />
-            </span>
-          ) : currentUser ? (
+          {currentUser ? (
             <OverlayTrigger
               placement="top"
               overlay={
