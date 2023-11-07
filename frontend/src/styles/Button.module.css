@@ -24,7 +24,7 @@
   }
   
   .Button:focus {
-    background-color: #ff8b8b;
+    background-color: #ff2121;
   }
   
   .Wide {
@@ -54,9 +54,9 @@
   
   .Black:hover,
   .BlackOutline {
-    border: 1px solid rgb(134, 245, 255);
-    background-color: rgb(134, 245, 255);
-    color: #000000;
+    border: 1px solid rgb(22, 77, 83);
+    background-color: rgb(22, 77, 83);
+    color: #ffffff;
   }
   
   .Bright {
