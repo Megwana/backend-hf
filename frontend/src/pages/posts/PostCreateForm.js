@@ -14,11 +14,9 @@ import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
 
-
 function PostCreateForm() {
   useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
-  const [success, setSuccess] = useState(false); // set success const
 
   const [postData, setPostData] = useState({
     title: "",
@@ -57,7 +55,6 @@ function PostCreateForm() {
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
-      setSuccess(true); // Set success state to true
       history.push(`/posts/${data.id}`);
     } catch (err) {
       if (err.response?.status !== 401) {
@@ -68,11 +65,6 @@ function PostCreateForm() {
 
   const textFields = (
     <div className="text-center">
-      {success && (
-        <Alert variant="success">
-          Post created successfully!
-        </Alert> // render success alert
-      )}
       <Form.Group>
         <Form.Label>Title</Form.Label>
         <Form.Control
@@ -103,6 +95,7 @@ function PostCreateForm() {
           {message}
         </Alert>
       ))}
+
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
