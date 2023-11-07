@@ -38,10 +38,10 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-    '10.0.5.2:8081',
+    '10.0.5.2:8080',
     'localhost',
     'hot-feet-86e6050a3b3d.herokuapp.com',
-    '8081-megwana-backendhf-mjkok1s6mt2.ws-eu105.gitpod.io',
+    '8080-megwana-backendhf-mjkok1s6mt2.ws-eu105.gitpod.io',
     '8000-megwana-backendhf-mjkok1s6mt2.ws-eu105.gitpod.io'
 ]
 
