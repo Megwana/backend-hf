@@ -119,9 +119,10 @@ Testing for posts was carried out on the backend. The link to view this can be s
       - [Colour Scheme](#colour-scheme)
       - [Typography](#typography)
       - [Current Features Frontend](#current-features-frontend)
-    - [Technology Used](#technology-used)
-    - [Deployment](#deployment)
-    - [Credit & Acknowledgments](#credit-and-acknowledgments)
+  - [Technology Used](#technology-used)
+  - [Frontend Tests](#frontend-tests)
+  - [Deployment](#deployment)
+  - [Credit & Acknowledgments](#credit-and-acknowledgments)
 
 
 ## UX Design
@@ -299,6 +300,39 @@ Here is an example below of instances where a visitor will be reminded they need
 [React-router-dom](https://www.npmjs.com/package/react-router-dom)
 
 [Popper](https://popper.js.org/)
+
+## Frontend Tests
+
+### Manual Testing 
+
+1. **User Registration:**
+  - Description: Test the registration process for new users.
+  - Steps:
+    1. Navigate to the sign up page.
+    2. Fill in valid registration information.
+    3. Click the "Sign Up" button.
+    4. Verify successful registration and login.
+  - Expected Results: After step 4, the user should be registered and redirected to the 'sign in' page. The user should then able be able to successfully sign in. 
+  - Actual Results: Redirected to sign in page now user details have been created. Works as expected.
+
+2. **Login Functionality:**
+  - Description: Test user login functionality.
+  - Steps:
+    1. Go to the login page.
+    2. Enter valid login credentials.
+    3. Click the "Login" button.
+    4. Verify successful login and redirection to the user home page.
+  - Expected Results: After step 4, the user should be logged in and redirected to their home page.
+  - Actual Results: Verify logged in user profile is in top right and navbar changed to 'sign out' options. Works as expected.
+
+**3. Following Someone**
+- Description: Test the functionality to follow another user.
+- Steps:
+   1. Log in to account.
+   2. Go to the profile of the user you want to follow OR the profile on 'Most Followed Profiles'.
+   3. Click the "Follow" button.
+- Expected Results: After step 3, you should be following the user, and their content should appear in your feed.
+- Actual Results: Verify that you are following the user, and their content is visible in your feed.
 
 ## Deployment
 
