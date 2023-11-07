@@ -48,17 +48,20 @@ const Post = (props) => {
 
   // Handle Like
   const handleLike = async () => {
-    try {
-      const { data } = await axiosRes.post("/likes/", { post: id });
-      setPosts((prevPosts) => ({
-        ...prevPosts,
-        results: prevPosts.results.map((post) => {
-          return post.id === id
-            ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
-            : post;
-        }),
-      }));
-    } catch (err) {
+    if (dislike_id) {
+    } else {
+      try {
+        const { data } = await axiosRes.post("/likes/", { post: id });
+        setPosts((prevPosts) => ({
+          ...prevPosts,
+          results: prevPosts.results.map((post) => {
+            return post.id === id
+              ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
+              : post;
+          }),
+        }));
+      } catch (err) {
+      }
     }
   };
 
@@ -79,17 +82,20 @@ const Post = (props) => {
 
   // Handle dislike
   const handleDislike = async () => {
-    try {
-      const { data } = await axiosRes.post("/dislikes/", { post: id });
-      setPosts((prevPosts) => ({
-        ...prevPosts,
-        results: prevPosts.results.map((post) => {
-          return post.id === id
-            ? { ...post, dislikes_count: post.dislikes_count + 1, dislike_id: data.id }
-            : post;
-        }),
-      }));
-    } catch (err) {
+    if (like_id) {
+    } else {
+      try {
+        const { data } = await axiosRes.post("/dislikes/", { post: id });
+        setPosts((prevPosts) => ({
+          ...prevPosts,
+          results: prevPosts.results.map((post) => {
+            return post.id === id
+              ? { ...post, dislikes_count: post.dislikes_count + 1, dislike_id: data.id }
+              : post;
+          }),
+        }));
+      } catch (err) {
+      }
     }
   };
 
@@ -205,9 +211,20 @@ const Post = (props) => {
               <i className={`fas fa-heart ${styles.Heart}`} />
             </span>
           ) : currentUser ? (
+            <OverlayTrigger
+            placement="top"
+            overlay={
+              dislike_id ? (
+                <Tooltip>You can't like a post you've already disliked.</Tooltip>
+              ) : (
+                <Tooltip>Click to like</Tooltip>
+              )
+            }
+          >
             <span onClick={handleLike}>
               <i className={`far fa-heart ${styles.HeartOutline}`} />
             </span>
+          </OverlayTrigger>
           ) : (
             <OverlayTrigger
               placement="top"
@@ -224,14 +241,26 @@ const Post = (props) => {
             >
               <i className="far fa-thumbs-down" />
             </OverlayTrigger>
+            
           ) : dislike_id ? (
             <span onClick={handleUndislike}>
               <i className={`fas fa-thumbs-down ${styles.ThumbsDown}`} />
             </span>
           ) : currentUser ? (
-            <span onClick={handleDislike}>
-              <i className={`far fa-thumbs-down ${styles.ThumbsDownOutline}`} />
-            </span>
+            <OverlayTrigger
+              placement="top"
+              overlay={
+                like_id ? (
+                  <Tooltip>You can't dislike a post you've already liked.</Tooltip>
+                ) : (
+                  <Tooltip>Click to dislike</Tooltip>
+                )
+              }
+            >
+              <span onClick={handleDislike}>
+                <i className={`far fa-thumbs-down ${styles.ThumbsDownOutline}`} />
+              </span>
+            </OverlayTrigger>
           ) : (
             <OverlayTrigger
               placement="top"
@@ -241,14 +270,22 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
           {dislikes_count}
-          <OverlayTrigger
+          {currentUser ? (
+            // comment link for logged-in users
+            <Link to={`/posts/${id}`}>
+              <i className="far fa-comments" />
+            </Link>
+          ) : (
+            // overlay trigger for users who are not logged in
+            <OverlayTrigger
               placement="top"
               overlay={<Tooltip>Log in to comment on posts!</Tooltip>}
             >
-            <Link to={`/posts/${id}`}>
-            <i className="far fa-comments" />
-          </Link>
+              <Link to={`/posts/${id}`}>
+                <i className="far fa-comments" />
+              </Link>
             </OverlayTrigger>
+          )}
           {comments_count}
         </div>
       </Card.Body>
