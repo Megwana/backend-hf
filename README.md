@@ -400,6 +400,52 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: After step 3, my comment should be removed from the post.
 - Actual Results: View that the comment has been deleted. Works as expected.
 
+**10. Bookmarking a Post**
+- Description: Test my ability to bookmark a post for later viewing.
+- Steps:
+   1. Log in to my account.
+   2. Find a post.
+   3. Click the "Bookmark" icon in the top right.
+- Expected Results: After step 3, the post should be saved in my bookmarks for future reference.
+- Actual Results: Check that the post is saved in my bookmarks. Works as expected.
+
+**11. Unliking a Post**
+- Description: Test my ability to remove a like from a post.
+- Steps:
+   1. Log in to my account.
+   2. Find a post that I have liked.
+   3. Click the "Unlike" button.
+- Expected Results: After step 3, the post should no longer show that I liked it, and the like count should decrease.
+- Actual Results: Confirm that the post no longer reflects my like. Works as expected.
+
+**12. Disliking a Post**
+- Description: Test my ability to dislike a post.
+- Steps:
+   1. Log in to my account.
+   2. Find a post.
+   3. Click the "thumbs-down" button.
+- Expected Results: After step 3, the post should show that I have disliked it by changing color, and the dislike count should increase.
+- Actual Results: Verify that the post reflects my dislike, and the dislike count increases. Works as expected.
+
+**13. Undisliking a Post**
+- Description: Test my ability to remove a dislike from a post.
+- Steps:
+   1. Log in to my account.
+   2. Find a post that I have disliked.
+   3. Click the "thumbs-down" button.
+- Expected Results: After step 3, the post should no longer show that I disliked it by changing  and the dislike count should decrease.
+- Actual Results: Confirm that the post no longer reflects my dislike. Works as expected.
+
+**14. Unbookmarking a Post**
+- Description: Test my ability to remove a bookmark from a post.
+- Steps:
+   1. Log in to my account.
+   2. Go to my bookmarks.
+   3. Find a bookmarked post.
+   4. Click the gold "bookmark" icon.
+- Expected Results: After step 4, the post should be removed from my bookmarks and bookmark icon goes back to grey outline and no gold.
+- Actual Results: Check that the post has been successfully unbookmarked. Works as expected.
+
 ## Deployment
 
 ## Deployment Process
