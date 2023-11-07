@@ -17,9 +17,7 @@ class PostList(generics.ListCreateAPIView):
     queryset = Post.objects.annotate(
         likes_count=Count('likes', distinct=True),
         dislikes_count=Count('dislikes', distinct=True),
-        bookmarks_count=Count('bookmark', distinct=True),
         comments_count=Count('comment', distinct=True),
-        latest_bookmark_created_at=Max('bookmark__created_at')
     ).order_by('-created_at')
     filter_backends = [
         filters.OrderingFilter,
@@ -30,6 +28,7 @@ class PostList(generics.ListCreateAPIView):
         'owner__followed__owner__profile',
         'likes__owner__profile',
         'dislikes__owner__profile',
+        'bookmarks__owner__profile',
         'owner__profile',
         'category',
     ]
@@ -41,11 +40,10 @@ class PostList(generics.ListCreateAPIView):
     ordering_fields = [
         'likes_count',
         'dislikes_count',
-        'bookmarks_count',
         'comments_count',
         'likes__created_at',
         'dislikes__created_at',
-        'latest_bookmark_created_at',
+        'bookmarks__created_at',
     ]
 
     def perform_create(self, serializer):
