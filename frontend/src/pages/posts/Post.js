@@ -273,10 +273,6 @@ const Post = (props) => {
           {currentUser ? (
             // comment link for logged-in users
             <Link to={`/posts/${id}`}>
-              <OverlayTrigger
-                placement="top"
-                overlay={<Tooltip>Click to comment</Tooltip>}
-              ></OverlayTrigger>
               <i className="far fa-comments" />
             </Link>
           ) : (
