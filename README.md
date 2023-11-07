@@ -332,7 +332,73 @@ Here is an example below of instances where a visitor will be reminded they need
    2. Go to the profile of the user you want to follow OR the profile on 'Most Followed Profiles'.
    3. Click the "Follow" button.
 - Expected Results: After step 3, you should be following the user, and their content should appear in your feed.
-- Actual Results: Verify that you are following the user, and their content is visible in your feed.
+- Actual Results: Successully following the user, follow icon changes to unfollow and their content is visible in my feed.
+
+**4. Unfollowing Someone**
+- Description: Test the functionality to unfollow a user.
+- Steps:
+   1. Log in to account.
+   2. Go to the profile of the user you want to follow OR the profile on 'Most Followed Profiles'.
+   3. Click the "Unfollow" button.
+- Expected Results: After step 3, you should no longer be following the user, and their content should not appear in your feed.
+- Actual Results: Successfully unfollowed the user, 'unfollow' button changes back to 'follow' and their content is no longer visible in my feed.
+
+**4. Liking a Post**
+- Description: Test my ability to like a post.
+- Steps:
+   1. Log in to my account.
+   2. Find a post.
+   3. Click the "Like" button.
+- Expected Results: After step 3, the post should show that I have liked it, and the like count should increase.
+- Actual Results: Verify that the post reflects my like, and the like count increases. Works as expected.
+
+**5. Commenting on a Post**
+- Description: Test my ability to leave a comment on a post.
+- Steps:
+   1. Log in to my account.
+   2. Find a post.
+   3. Click the "Comment" button.
+   4. Enter my comment and click "Submit."
+- Expected Results: After step 4, my comment should be visible on the post.
+- Actual Results: Check that my comment is displayed on the post. Works as expected.
+
+**6. Editing a Post**
+- Description: Test my ability to edit one of my own posts.
+- Steps:
+   1. Log in to my account.
+   2. Find one of my posts and click on the three dots in the top right.
+   3. Click the "Edit" icon.
+   4. Make changes to the post and save.
+- Expected Results: After step 4, my post should reflect the changes I made.
+- Actual Results: Verify that my edited post shows the modifications. Works as expected.
+
+**7. Deleting a Post**
+- Description: Test my ability to delete one of my own posts.
+- Steps:
+   1. Log in to my account.
+   2. Find one of my posts and click on the three dots in the top right.
+   3. Click the "Trash" icon.
+- Expected Results: After step 3, my post should be removed from the platform.
+- Actual Results: Confirm that my post has been deleted. Works as expected.
+
+**8. Editing a Comment**
+- Description: Test my ability to edit one of my own comments on a post.
+- Steps:
+   1. Log in to my account.
+   2. Find one of my comments on a post.
+   3. Click the "Edit" icon.
+   4. Make changes to the comment and save.
+- Expected Results: After step 4, my comment should reflect the changes I made.
+- Actual Results: Verify that my edited comment shows the modifications. Works as expected.
+
+**9. Deleting a Comment**
+- Description: Test my ability to delete one of my own comments on a post.
+- Steps:
+   1. Log in to my account.
+   2. Find one of my comments on a post.
+   3. Click the "Trash" icon.
+- Expected Results: After step 3, my comment should be removed from the post.
+- Actual Results: View that the comment has been deleted. Works as expected.
 
 ## Deployment
 
@@ -379,6 +445,10 @@ Here is an example below of instances where a visitor will be reminded they need
 17. Update the requirements.txt file to ensure the deployment doesn't fail by writing in the terminal "pip3 freeze --local > requirements.txt"
 
 18. Create a runtime.txt file containing `python-3.9.16`. 
+
+19. Before adding, committing and pushing, please double check the steps provided in this document regarding unifying both the Frontend and Backend:
+
+https://code-institute-students.github.io/advfe-unified-workspace/deployment/00-deployment
 
 19. Add, commit and Push your changes to GitHub
 
