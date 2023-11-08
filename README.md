@@ -303,11 +303,11 @@ Here is an example below of instances where a visitor will be reminded they need
 
 ## Frontend Tests
 
-### Manual Testing 
+### Manual Testing
 
 **Authentication Tests:**
 
-**1. User Registration:**
+`User Registration:`
 - **Description:** Test the registration process for new users.
 - **Steps:**
     1. Navigate to the sign-up page.
@@ -317,7 +317,7 @@ Here is an example below of instances where a visitor will be reminded they need
 - **Expected Results:** After step 4, my account should be registered, and I should be redirected to the 'sign in' page. I should then be able to successfully sign in.
 - **Actual Results:** Redirected to the sign-in page, and my details have been created. Works as expected.
 
-**2. Login Functionality:**
+`Login Functionality:`
 - **Description:** Test user login functionality.
 - **Steps:**
     1. Go to the login page.
@@ -327,9 +327,9 @@ Here is an example below of instances where a visitor will be reminded they need
 - **Expected Results:** After step 4, I should be logged in and redirected to my home page.
 - **Actual Results:** Verify that the logged-in user profile is in the top right, and the navbar changed to 'sign-out' options. Works as expected.
 
-## Authentication Validation Tests
+**Authentication Validation Tests**
 
-### Sign-Up Blank Space Validation
+`Sign-Up Blank Space Validation`
 
 - Description:Test if blank spaces in sign-up information are appropriately flagged.
 - Steps:
@@ -340,7 +340,7 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: After step 3, the sign-up process should be blocked, and an error message should inform the user that blank spaces are not allowed.
 - Actual Results: Verify that an error message is displayed, and the sign-up process is blocked when blank spaces are used in the input fields. Works as expected.
 
-### Sign-Up and Signin Character Validation
+`Sign-Up and Signin Character Validation`
 
 - Description: Test if minimum characters in sign-up and signin information are appropriately flagged.
 - Steps:
@@ -350,7 +350,7 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: After step 3, the sign-up/signin process should be blocked, and an error message should inform the user that more characters need to be included.
 - Actual Results: Verify that an error message is displayed, and the sign-up process is blocked. Works as expected.
 
-### Registration Blank Space Validation
+`Registration Blank Space Validation`
 
 - Description: Test if blank spaces in registration information are appropriately flagged.
 - Steps:
@@ -361,7 +361,7 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: After step 4, the changes should not be saved, and an error message should inform the user that blank spaces are not allowed in the registration information.
 - Actual Results: Verify that an error message is displayed, and the changes are not saved when blank spaces are used in the input fields. Works as expected.
 
-### Sign-In Incorrect Password Validation
+`Sign-In Incorrect Password Validation`
 
 - Description: Test if incorrect passwords during sign-in are appropriately flagged.
 - Steps:
@@ -374,7 +374,7 @@ Here is an example below of instances where a visitor will be reminded they need
 
 ## Comment Tests
 
-### Comment Creation
+`Comment Creation`
 
 - Description: Test the creation of comments on posts.
 - Steps:
@@ -385,7 +385,7 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: The comment should be successfully posted and displayed below the post.
 - Actual Results: Verify that the comment is visible and associated with the correct post. Works as expected.
 
-### Edit Comment
+`Edit Comment`
 
 - Description: Test the editing of existing comments.
 - Steps:
@@ -398,7 +398,7 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: The comment should be successfully edited with the new content displayed.
 - Actual Results: Verify that the comment is updated with the edited content. Works as expected.
 
-## Comment Deletion
+`Comment Deletion`
 
 - Description: Test the deletion of comments on posts.
 - Steps:
@@ -411,7 +411,7 @@ Here is an example below of instances where a visitor will be reminded they need
 
 ## Post Tests
 
-### Post Creation
+`Post Creation`
 
 - Description: Test the creation of new posts.
 - Steps:
@@ -422,7 +422,7 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: The new post should be successfully created and displayed in the feed.
 - Actual Results: Verify that the new post is visible in the home page. Works as expected.
 
-### Edit Post
+`Edit Post`
 
 - Description: Test the editing of existing posts.
 - Steps:
@@ -435,7 +435,7 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: The post should be successfully edited with the updated content and attachments.
 - Actual Results: Verify that the post is updated with the edited content and attachments. Works as expected.
 
-### Post Deletion
+`Post Deletion`
 
 - Description: Test the deletion of existing posts.
 - Steps:
@@ -448,7 +448,7 @@ Here is an example below of instances where a visitor will be reminded they need
 
 ## Follow Tests
 
-### Follow User
+`Follow User`
 
 - Description: Test the functionality of following other users.
 - Steps:
@@ -458,7 +458,7 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: You should be following the user, and their updates should appear in your feed.
 - Actual Results: Verify that you are following the user, and their updates are in your feed. Works as expected.
 
-### Unfollow User
+`Unfollow User`
 
 - Description: Test the functionality of unfollowing users you previously followed.
 - Steps:
@@ -468,7 +468,7 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: You should no longer be following the user, and their updates should no longer appear in your feed.
 - Actual Results: Verify that you are no longer following the user, and their updates are no longer in your feed. Works as expected.
 
-### Not Follow Your Own Profile
+`Not Follow Your Own Profile`
 
 - Description: Test the functionality that you cannot follow yourself.
 - Steps:
@@ -480,7 +480,7 @@ Here is an example below of instances where a visitor will be reminded they need
 
 ## Bookmark, Like, Dislike Tests
 
-### Bookmark Post
+`Bookmark Post`
 
 - Description: Test the ability to bookmark posts for later viewing.
 - Steps:
@@ -490,7 +490,7 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: The post should be bookmarked and available in your bookmarks for future reference. Bookmark icon is now gold coloured.
 - Actual Results: Verify that the post is saved in your bookmarks. Works as expected.
 
-### Remove Bookmark
+`Remove Bookmark`
 
 - Description: Test the removal of bookmarked posts.
 - Steps:
@@ -501,7 +501,7 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: The post should be removed from your bookmarks and no longer accessible there.
 - Actual Results: Verify that the post is no longer in your bookmarks after removal. Works as expected.
 
-### Like Post
+`Like Post`
 
 - Description: Test the ability to like posts.
 - Steps:
@@ -511,7 +511,7 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: The post should be liked, and your like should be visible.
 - Actual Results: Verify that your like is recorded and visible on the post. Works as expected.
 
-### Dislike Post
+`Dislike Post`
 
 - Description: Test the ability to dislike posts.
 - Steps:
@@ -521,11 +521,11 @@ Here is an example below of instances where a visitor will be reminded they need
 - Expected Results: The post should be disliked, and your dislike should be visible.
 - Actual Results: Verify that your dislike is recorded and visible on the post. Works as expected.
 
-### Unlike and Undislike Post
+`Unlike and Undislike Post`
 
 The process the unlike and undislike a post is the same as bookmark. Hover back on the heart icon (for the like) and the thumbs down icon for dislike. When you click on them they should return to black outlines with no longer a solid presenting colour. 
 
-### Like and dislike the Same Post
+`Like and dislike the Same Post`
 
 - Description: Test the ability to dislike and like the same post using the same user. 
 - Steps:
@@ -536,7 +536,7 @@ The process the unlike and undislike a post is the same as bookmark. Hover back 
 
 **Profile Tests**
 
-**1. Most Followed Avatar Links to their Profile Page**
+`Most Followed Avatar Links to their Profile Page`
 - **Description:** Test that the most followed avatar links to their profile page.
 - **Steps:**
    1. Log in to my account.
@@ -545,7 +545,7 @@ The process the unlike and undislike a post is the same as bookmark. Hover back 
 - **Expected Results:** After step 3, I should be redirected to their profile page.
 - **Actual Results:** Verify that clicking on the avatar leads to their profile page. Works as expected.
 
-**2. Three Dots in the Top Right of a Profile Opens Editing Options**
+`Three Dots in the Top Right of a Profile Opens Editing Options`
 - **Description:** Test that clicking the three dots in the top right of a profile opens editing options.
 - **Steps:**
    1. Log in to my account.
@@ -554,7 +554,7 @@ The process the unlike and undislike a post is the same as bookmark. Hover back 
 - **Expected Results:** After step 3, a menu with editing options should open.
 - **Actual Results:** Confirm that clicking the three dots icon displays the editing options. I can't view three dot option on other users profiles, just mine. Works as expected.
 
-**3. Clicking Edit Profile Routes to the Edit Page, Displaying My Current Profile and Bio Content**
+`Clicking Edit Profile Routes to the Edit Page, Displaying My Current Profile and Bio Content`
 - **Description:** Test that clicking "Edit Profile" on my profile page routes to the edit page and displays my current profile and bio content.
 - **Steps:**
    1. Log in to my account.
@@ -563,7 +563,7 @@ The process the unlike and undislike a post is the same as bookmark. Hover back 
 - **Expected Results:** After step 3, I should be directed to the edit page, and my current profile and bio content should be visible.
 - **Actual Results:** Confirm that clicking "Edit Profile" takes me to the edit page with my current profile and bio content displayed. Works as expected.
 
-**4. Clicking the Change Image Button Opens My OS Folders for Photo Upload**
+`Clicking the Change Image Button Opens My OS Folders for Photo Upload`
 - **Description:** Test that clicking the "Change Image" button allows me to upload a photo from my device.
 - **Steps:**
    1. Log in to my account.
