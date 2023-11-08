@@ -185,6 +185,47 @@ Testing for posts was carried out on the backend. The link to view this can be s
   2. I retrieved all bookmarks for a specific user.
   3. I verified that the bookmarks are ordered in descending order based on their `created_at` timestamp.
 
+### Comment Manual Testing:
+
+1. Create a Comment
+
+- **Test Scenario**: Creating a comment.
+- **Testing I Have Carried Out**:
+  1. Using the Django admin interface or an API endpoint, I created a new `Comment` instance by associating it with a `User`, a `Post`, and providing comment content.
+  2. I verified that the comment is created without errors.
+  3. I confirmed that the `created_at` field is automatically set to the current date and time.
+  4. I checked that the comment is associated with the correct user and post, and the content is accurate.
+
+2. Comment Ownership
+
+- **Test Scenario**: Verifying the owner of a comment.
+- **Testing I Have Carried Out**:
+  1. I retrieved an existing comment instance.
+  2. I confirmed that the `owner` attribute of the comment refers to the correct `User` who created it.
+
+3. Commented Post
+
+- **Test Scenario**: Verifying the post that has been commented on.
+- **Testing I Have Carried Out**:
+  1. I retrieved an existing comment instance.
+  2. I confirmed that the `post` attribute of the comment refers to the correct `Post` that the comment is associated with.
+
+4. Comment Timestamps
+
+- **Test Scenario**: Checking the timestamps for comments.
+- **Testing I Have Carried Out**:
+  1. I created multiple comments at different times.
+  2. I retrieved all comments for a specific post or user.
+  3. I verified that the comments are ordered in descending order based on their `created_at` timestamp.
+  4. I also ensured that the `updated_at` timestamp is automatically updated when a comment is modified.
+
+5. Comment Content
+
+- **Test Scenario**: Verifying the content of a comment.
+- **Testing I Have Carried Out**:
+  1. I retrieved an existing comment instance.
+  2. I confirmed that the `content` attribute of the comment contains the correct comment text.
+  
 # Frontend
 
 ## Frontend Contents
