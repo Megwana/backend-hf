@@ -2,7 +2,7 @@
 
 ![RunningHero](https://res.cloudinary.com/dnkoqrvie/image/upload/v1697040192/media/images/banner_rzae6b.jpg)
 
-# Backend REAMEME
+# Backend README
 
 ## Project Description
 
@@ -311,6 +311,72 @@ Testing for posts was carried out on the backend. The link to view this can be s
   2. I checked that no new `Profile` was created for existing users during user creation.
 
 **Profile Results: All work as expected.**
+
+### Like Backend Manual Testing
+
+1. Creating a Like Object
+
+**Test Results:**
+I created a new Like object, associating it with an existing User and Post instance. The Like object was created successfully without any errors.
+
+**Expected Outcome:** The Like object was created, and no exceptions were raised.
+
+2. Unique Constraint Check
+
+**Test Results:**
+I attempted to create a Like object with the same 'owner' and 'post' as an existing Like object. An error was raised, indicating that the unique constraint is enforced.
+
+**Expected Outcome:** An integrity error occurred, preventing the creation of a duplicate Like object with the same 'owner' and 'post.
+
+3. Fetching Likes for a Post
+
+**Test Results:**
+I created multiple Like objects associated with the same Post instance. I queried the database to retrieve all Likes related to the Post. The retrieved Likes matched the expected count and content.
+
+**Expected Outcome:** The database query returned the correct number of Likes associated with the given Post, and their 'owner' and 'post' attributes were accurate.
+
+4. Sorting Likes by Created Date
+
+**Test Results:**
+I created multiple Like objects with different 'created_at' timestamps. I retrieved the Likes associated with a Post. The Likes were sorted in descending order based on their 'created_at' timestamps.
+
+**Expected Outcome:** The Likes were returned in descending order, with the most recent Likes appearing first.
+
+**Like Results: All work as expected.**
+
+I then proceeded to do the same for dislikes as above, all worked as expected.
+
+### Post Backend Manual Testing:
+
+1. Creating a Post Object
+
+**Test Results:**
+I have successfully created a new 'Post' object, including all required fields such as 'owner', 'created_at', 'title', and 'image'. The object was created without any errors.
+
+**Expected Outcome:** The 'Post' object should be created, and no exceptions should be raised.
+
+2. Updating a Post
+
+**Test Results:**
+I have updated an existing 'Post' object by modifying the 'title' and 'content' fields. The update was successful, and the 'updated_at' timestamp was also correctly updated.
+
+**Expected Outcome:** The 'Post' object should be updated with the changes, and the 'updated_at' timestamp should reflect the modification.
+
+3. Retrieving Posts by Category
+
+**Test Results:**
+I have created 'Post' objects with various categories (e.g., Adidas, Nike) and then queried the database to retrieve all 'Posts' of a specific category. The retrieved posts matched the expected count and had the correct category.
+
+**Expected Outcome:** The database query should return the correct number of 'Posts' associated with the specified category, and their 'category' attribute should be accurate.
+
+4. Sorting Posts by Created Date
+
+**Test Results:**
+I created multiple 'Post' objects with different 'created_at' timestamps. I retrieved the 'Posts' and verified that they were sorted in descending order based on their 'created_at' timestamps.
+
+**Expected Outcome:** The 'Posts' should be returned in descending order, with the most recent 'Posts' appearing first.
+
+**Post Results: All work as expected.**
 
 # Frontend
 
@@ -707,27 +773,51 @@ Use Example: Showing the "Page Not Found" message in case of route errors.
 
 [Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=Cj0KCQjwusunBhCYARIsAFBsUP-gDW29z3R77OhQlYdhypOTWE6HlyxD1Vbm031R_Z0JycdKz6kJEd8aAmHEEALw_wcB)
 
+Balsamiq: I used Balsamiq for wireframing and prototyping. It's a great tool for quickly creating low-fidelity sketches of my project's user interface, helping me visualize the layout and design before diving into development.
+
 [ColourWheel](https://color.adobe.com/create/color-wheel)
+
+ColourWheel: I turned to Adobe's Color Wheel to help me choose a harmonious color scheme for my project. It made color selection much easier and ensured that my design looked appealing and cohesive.
 
 [ReactBootstrap](https://react-bootstrap.github.io/docs/getting-started/introduction/)
 
+ReactBootstrap: I opted for ReactBootstrap to expedite the development of my project's user interface. ReactBootstrap provides pre-designed UI components and styles that integrate seamlessly with React, saving me time and effort in building responsive and visually appealing UI elements.
+
 [Heroku](https://dashboard.heroku.com)
+
+Heroku: Heroku is my chosen platform for hosting and deploying my web application. It offers a user-friendly interface and automated deployment processes, making it easy for me to bring my project to life on the web.
 
 [DjangoRestFramework](https://www.django-rest-framework.org/)
 
+DjangoRestFramework: I utilized DjangoRestFramework as the backbone for my project's backend. It's a powerful framework for building RESTful APIs in Python, making it a reliable choice for managing data and interactions between the client and server.
+
 [React](https://react.dev/)
+
+React: I implemented the front-end of my project using React. Its component-based architecture allowed me to create a dynamic and responsive user interface, improving the user experience and making it easier to maintain and scale my project.
 
 [GoogleFonts](https://fonts.google.com/)
 
+Google Fonts: I integrated Google Fonts to enhance the typography of my project. It provided a wide variety of fonts that I could easily incorporate into my web application, ensuring a professional and customized look.
+
 [Cloudinary](https://cloudinary.com/)
+
+Cloudinary: I relied on Cloudinary for handling media assets like images and videos. It offers a robust and user-friendly way to manage and optimize media files, which was essential for my project's media-rich content.
 
 [ElephantSQL](https://www.elephantsql.com/)
 
+ElephantSQL: I used ElephantSQL as a cloud-hosted PostgreSQL database service. It's reliable and scalable, which was crucial for managing my project's data efficiently and securely.
+
 [Axios](https://www.npmjs.com/package/axios)
+
+Axios: Axios was my choice for making HTTP requests from the client-side to the server. It's a popular and easy-to-use JavaScript library that helped me handle data retrieval and updates seamlessly.
 
 [React-router-dom](https://www.npmjs.com/package/react-router-dom)
 
+React-router-dom: I used React-router-dom to manage the client-side routing in my React application. It allowed me to create a single-page application with distinct views and routes, enhancing navigation and user experience.
+
 [Popper](https://popper.js.org/)
+
+Popper: Popper.js came in handy for managing tooltips and popovers in my project. It's a JavaScript library that made it simple to create interactive and informative user interface elements.
 
 ## Frontend Tests
 
