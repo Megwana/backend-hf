@@ -327,6 +327,7 @@ Testing for posts was carried out on the backend. The link to view this can be s
       - [Colour Scheme](#colour-scheme)
       - [Typography](#typography)
       - [Current Features Frontend](#current-features-frontend)
+      - [Features UX](#features-ux---how-have-the-current-features-improved-user-experience)
 - [React Architecture](#rea)
 - [Technology Used](#technology-used)
 - [Frontend Tests](#frontend-tests)
@@ -605,6 +606,32 @@ When a user is hovering over the dislike, it turns red
 When a user is yet to dislike or has clicked on the thumbs down icon if it has already been disliked it will present as a black outline with not colour within the outline. 
 
 ![Undislike](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699408032/dislikeundislike_r3m9xx.png)
+
+### Features UX - How have the current features improved user experience?
+
+Logo and Favicon: The website's logo and favicon enhance brand recognition and provide users with a familiar visual identity. Clicking on the logo to return to the home page is a standard and user-friendly navigation feature.
+
+Sign Up and Sign In: The clear and visually appealing sign-up and sign-in pages make the registration process straightforward. The "Sign In" link provides an easy transition for users who already have accounts.
+
+Error Handling: The forms for sign-up and sign-in provide informative error messages. This proactive feedback helps users correct any mistakes in their input, improving the overall user experience.
+
+Navbar: The navbar adapts based on whether a user is signed in or out, offering relevant options. Restricting certain actions like posting, liking, and commenting to signed-in users is a security measure that ensures data integrity.
+
+Reminders to Sign In: When users attempt actions that require authentication, such as liking, disliking, or bookmarking, they are reminded to sign in. This clear messaging prevents frustration and guides users.
+
+Likes and Bookmarks: The ability to like and bookmark content provides a way for users to interact with and save their favorite items. The change in color of liked posts and bookmarked content provides visual feedback and reinforcement of user actions. Bookmark feature adds that extra personalisation where if users want to specifically retrieve a post instead of just their random likes, they have a space to access this easily.
+
+Follow Profiles: The "Most Followed Profiles" section gives users insights into popular profiles, encouraging them to engage with others. Clear follow/unfollow buttons and visual indicators make it easy to manage these connections.
+
+Comment Section: A well-structured comment section allows users to engage in discussions. The ability to edit and delete comments empowers users to manage their contributions.
+
+Profile Management: Users can personalize their profiles with photos and bios, providing a sense of identity on the platform. The option to change usernames and passwords is essential for account customization and security.
+
+Dislikes: The inclusion of a dislike feature allows users to express their opinions about content, promoting more diverse interactions.
+
+Visual Design: The visual design of the interface is clean and consistent, contributing to a pleasant user experience.
+
+Overall, these features collectively improve the user experience by providing clear navigation, interactivity, error handling, and personalization options, making the platform user-friendly and engaging.
 
 ## React Architecture
 
