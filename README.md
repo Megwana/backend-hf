@@ -142,30 +142,49 @@ Testing for posts was carried out on the backend. The link to view this can be s
 
 In order to manage the workload, I have divided my focus into three categories, depending on their overall importance to reaching a **minimum viable product (MVP).**
 
+For my User Stories, I have organised their importance using the MoSCoW method. This is is an acronym which stands for 'must-have', 'should-have' and 'could-have'. This method is helpful tool that I used to help prioritze my product features in this project. If you wish to know more about this method, you read more [here](https://www.techtarget.com/searchsoftwarequality/definition/MoSCoW-method).
+
+Must-Haves = 40%
+Should-Haves = 30%
+Could-Haves = 20%
+Won't-Haves = 10%
+
 - Must Have
 
-  Account Authenitcation
-  - Profile page
-  - All posts feed
-  - User posts
-  - Liked post feed
-  - Followed user feed
-  - User followed
-  - User comments
-  - User likes
+  - Authenitcation: Sign in
+  - Authenitcation: Sign out
+  - Authenitcation: Securely Sign up
+  - Create Profile
+  - Edit Profile
+  - Create Post
+  - Edit Post
+  - Delete Post
+  - Comment on Post
+  - Edit Comment
+  - Delete Comment
+  - Like Post
+  - Unlike Post
+  - Posts: View all my Posts
 
 - Should Have
 
-  - Infinite scroll
-  - Dislike Button
-  - View All Likes in on place
+  - Profile: View mine and other's profiles
+  - Bookmarks: Bookmark a Post
+  - Bookmarks: View a list of all my Bookmarked posts
+  - Dislikes: Dislike a Post
+  - Followers: Follow other users 
+  - Followers: Unfollow other users
+  - Followers: See a feed of only the users I follow
 
 - Could Have
 
-  - Bookmark for individual products
-  - View all bookmarks in one place
+  - Posts: See Most Liked Posts
+  - Bookmarks: Remove a post from my bookmarks
   - User permission levels, user/admin/visitor
-  - Search by brand category - Nike, Saucony, Brooks
+  - Infinate Scroll
+
+- Won't Have  
+   - Poll posts (a future feature to grown the website)
 
 ## Structure Plane
 
