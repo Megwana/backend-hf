@@ -267,6 +267,45 @@ Testing for posts was carried out on the backend. The link to view this can be s
 
 **Follower Results: All work as expected.**
 
+### Profile Backend Manual Testing:
+
+1. Create a Profile
+
+- **Test Scenario**: Creating a user profile.
+- **Testing I Have Carried Out**:
+  1. Using the Django admin interface or an API endpoint, I created a new `Profile` instance by associating it with a `User`.
+  2. I verified that the profile is created without errors.
+  3. I confirmed that the `created_at` field is automatically set to the current date and time.
+  4. I checked that the profile is associated with the correct user.
+  5. I ensured that the `name`, `content`, and `image` fields are saved accurately.
+
+2. Profile Timestamps
+
+- **Test Scenario**: Checking the timestamps for profiles.
+- **Testing I Have Carried Out**:
+  1. I created multiple profiles at different times.
+  2. I retrieved all profiles for different users.
+  3. I verified that the profiles are ordered in descending order based on their `created_at` timestamp.
+
+### create_profile Signal
+
+3. Trigger create_profile Signal
+
+- **Test Scenario**: Triggering the `create_profile` signal.
+- **Testing I Have Carried Out**:
+  1. I registered a new `User` through the Django registration process.
+  2. I verified that, upon creating the user, the `create_profile` signal was triggered.
+  3. I checked that a corresponding `Profile` instance was automatically created for the new user.
+
+4. Signal Handling for Existing User
+
+- **Test Scenario**: Ensuring the signal handles existing users.
+- **Testing I Have Carried Out**:
+  1. I confirmed that creating a new `User` for an existing user did not trigger the signal.
+  2. I checked that no new `Profile` was created for existing users during user creation.
+
+**Profile Results: All work as expected.**
+
 # Frontend
 
 ## Frontend Contents
