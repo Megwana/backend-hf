@@ -27,7 +27,11 @@ This repository hold the API for the full stack application HotFeet. This websit
   - [Development Process](#development-process)
   - [Tests](#tests)
     - [Backend Post Tests](#backend-post-tests)
-    - [Backend Manual Tests](#backend-manual-testing)
+    - [URL Manual Tests](#backend-url-manual-testing)
+    - [Bookmark Tests](#bookmark-backend-manual-testing)
+    - [Comment Tests](#comment-backend-manual-testing)
+    - [Follow Tests](#follow-backend-manual-testing)
+    - [Profile Tests](#profile-backend-manual-testing)
   
 ## Main Technologies
 + HTML, CSS, JavaScript
@@ -146,7 +150,7 @@ Testing for posts was carried out on the backend. The link to view this can be s
 
 **drf_api url.py Results: All work as expected.**
 
-### Bookend Backend Manual Testing:
+### Bookmark Backend Manual Testing:
 
 1. Create a Bookmark
 
