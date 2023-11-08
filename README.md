@@ -24,7 +24,8 @@ This repository hold the API for the full stack application HotFeet. This websit
   - [Models and CRUD breakdown](#models-and-crud-breakdown)
   - [Development Process](#development-process)
   - [Tests](#tests)
-    - [Post Tests](#post-tests)
+    - [Backend Post Tests](#backend-post-tests)
+    - [Backend Manual Tests](#backend-manual-testing)
   
 ## Main Technologies
 + HTML, CSS, JavaScript
@@ -100,9 +101,89 @@ CRUD:
 
 ## Tests
 
-### Post Tests
+### Backend Post Tests
 
 Testing for posts was carried out on the backend. The link to view this can be seen [here](posts/tests.py)
+
+### Backend Manual Testing:
+
+`1. Home Page URL`
+
+- **URL Pattern**: `/`
+- **Test Scenario**: Accessing the home page.
+- **Steps**:
+  1. Open a web browser.
+  2. Navigate to the root URL, `http://localhost:8000/`.
+  3. Verify that the home page loads correctly.
+
+`2. Admin Page URL`
+
+- **URL Pattern**: `/admin/`
+- **Test Scenario**: Accessing the Django admin page.
+- **Steps**:
+  1. Open a web browser.
+  2. Navigate to the admin URL, e.g., `http://localhost:8000/admin/`.
+  3. Verify that the Django admin login page is displayed.
+
+`3. API Authentication URLs`
+
+- **URL Pattern**: `/api/api-auth/`
+- **Test Scenario**: Accessing the API authentication URLs.
+- **Steps**:
+  1. Open a web browser.
+  2. Navigate to the API authentication URL, e.g., `http://localhost:8000/api/api-auth/`.
+  3. Verify that the API authentication URLs are accessible.
+
+`4. Logout Route`
+
+- **URL Pattern**: `/api/dj-rest-auth/logout/`
+- **Test Scenario**: Logging out from the application.
+- **Steps**:
+  1. Send a POST request to the `/api/dj-rest-auth/logout/` endpoint, e.g., using a tool like cURL or Postman.
+  2. Verify that the user is logged out, and the response indicates a successful logout.
+
+**drf_api url.py Results: All work as expected.**
+
+### Bookend Manual Testing:
+
+1. Create a Bookmark
+
+- **Test Scenario**: Creating a bookmark.
+- **Testing I Have Carried Out**:
+  1. Using the Django admin interface or an API endpoint, I created a new `Bookmark` instance by associating it with a `User` and a `Post`.
+  2. I verified that the bookmark is created without errors.
+  3. I confirmed that the `created_at` field is automatically set to the current date and time.
+  4. I checked that the bookmark is associated with the correct user and post.
+
+2. Unique Constraint
+
+- **Test Scenario**: Ensuring the uniqueness of bookmarks.
+- **Testing I Have Carried Out**:
+  1. I attempted to create a new `Bookmark` instance with the same `User` and `Post` as an existing bookmark.
+  2. I verified that the system prevents the creation of duplicate bookmarks.
+  3. I confirmed that an error or exception is raised, indicating a violation of the unique constraint.
+
+3. Bookmark Owner
+
+- **Test Scenario**: Verifying the owner of a bookmark.
+- **Testing I Have Carried Out**:
+  1. I retrieved an existing bookmark instance.
+  2. I confirmed that the `owner` attribute of the bookmark refers to the correct `User` who created it.
+
+4. Bookmark Post
+
+- **Test Scenario**: Verifying the bookmarked post.
+- **Testing I Have Carried Out**:
+  1. I retrieved an existing bookmark instance.
+  2. I confirmed that the `post` attribute of the bookmark refers to the correct `Post` that was bookmarked.
+
+5. Ordering of Bookmarks
+
+- **Test Scenario**: Checking the ordering of bookmarks.
+- **Testing I Have Carried Out**:
+  1. I created multiple bookmarks with different `created_at` timestamps.
+  2. I retrieved all bookmarks for a specific user.
+  3. I verified that the bookmarks are ordered in descending order based on their `created_at` timestamp.
 
 # Frontend
 
