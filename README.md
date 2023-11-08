@@ -779,6 +779,10 @@ Balsamiq: I used Balsamiq for wireframing and prototyping. It's a great tool for
 
 ColourWheel: I turned to Adobe's Color Wheel to help me choose a harmonious color scheme for my project. It made color selection much easier and ensured that my design looked appealing and cohesive.
 
+[Pexels](https://www.pexels.com/)
+
+Pexels: I decided to user Pexels to sample profile pics and many running trainer images. It is a very useful tool for sourcing image material for free that you can implement in your website.
+
 [ReactBootstrap](https://react-bootstrap.github.io/docs/getting-started/introduction/)
 
 ReactBootstrap: I opted for ReactBootstrap to expedite the development of my project's user interface. ReactBootstrap provides pre-designed UI components and styles that integrate seamlessly with React, saving me time and effort in building responsive and visually appealing UI elements.
@@ -1234,15 +1238,19 @@ Lighthouse Mobile Profile
 
 https://code-institute-students.github.io/advfe-unified-workspace/deployment/00-deployment
 
-20. Add, commit and Push your changes to GitHub
+20. Add, commit and Push your changes to GitHub.
 
-21. Go to the deploy tab in Heroku and Click 'Deploy Branch'.
+21. Run database migrations on Heroku: heroku run python manage.py migrate.
 
-22. Wait for your build to complete (If you want, you can also click “view build log” to watch the process in a larger window)
+22. Collect static files for production on Heroku: heroku run python manage.py collectstatic.
 
-23. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top right of the page.
+23. Go to the deploy tab in Heroku and Click 'Deploy Branch'.
 
-24. Well done, you have successfully deployed your project to Heroku! 
+24. Wait for your build to complete (If you want, you can also click “view build log” to watch the process in a larger window)
+
+25. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top right of the page.
+
+26. Well done, you have successfully deployed your project to Heroku! 
 
 ## Credit and Acknowledgments
 
