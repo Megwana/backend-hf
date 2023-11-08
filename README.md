@@ -572,33 +572,97 @@ The process the unlike and undislike a post is the same as bookmark. Hover back 
 - **Expected Results:** After step 3, my operating system's folders for photo upload should open.
 - **Actual Results:** Confirm that clicking "Change Image" opens my OS folders for photo upload. Once saving the picture to the user it is uploaded to cloudinary. Works as expected.
 
+### Nabar Tests
+
+`Navigation to Home Page`
+
+- Description: I will test the navigation to the home page by clicking the "Home" link in the navbar.
+- Steps:
+    1. I open the website.
+    2. I locate and click on the "Home" link in the navbar.
+- Expected Results: After step 2, I should be redirected to the home page of the website.
+- Actual Results: I verify that I am on the home page. Works as expected.
+
+`Navigation to Liked Page`
+
+- Description: I will test the navigation to the "Liked" page by clicking the "Liked" link in the navbar.
+- Steps:
+    1. I open the website.
+    2. I locate and click on the "Liked" link in the navbar.
+- Expected Results: After step 2, I should be redirected to the "Liked" page, where I can view the content I have liked.
+- Actual Results: I verify that I am on the "Liked" page, and it displays the liked content. Works as expected.
+
+`Navigation to Bookmarked Page`
+
+- Description: I will test the navigation to the "Bookmarked" page by clicking the "Bookmarked" link in the navbar.
+- Steps:
+    1. I open the website.
+    2. I locate and click on the "Bookmarked" link in the navbar.
+- Expected Results: After step 2, I should be redirected to the "Bookmarked" page, where I can view the content I have bookmarked for later.
+- Actual Results: I verify that I am on the "Bookmarked" page, and it displays the bookmarked content. Works as expected.
+
+`Navigation to Feed Page`
+
+- Description: I will test the navigation to the "Feed" page by clicking the "Feed" link in the navbar.
+- Steps:
+    1. I open the website.
+    2. I locate and click on the "Feed" link in the navbar.
+- Expected Results: After step 2, I should be redirected to the "Feed" page, where I can view updates and content from the website.
+- Actual Results: I verify that I am on the "Feed" page, and it displays the latest updates and content. Works as expected.
+
+`Navigation to Signin Page`
+
+- Description: I will test the navigation to the login page by clicking the "Login" link in the navbar.
+- Steps:
+    1. I open the website.
+    2. I locate and click on the "Sign in" link in the navbar.
+- Expected Results: After step 2, I should be redirected to the login page where I can enter my credentials to access my account.
+- Actual Results: I verify that I am on the login page. Works as expected.
+
+`Navigation to Signup Page`
+
+- Description: I will test the navigation to the registration page by clicking the "Sign up" link in the navbar.
+- Steps:
+    1. I open the website.
+    2. I locate and click on the "Sign up" link in the navbar.
+- Expected Results: After step 2, I should be redirected to the registration page where I can sign up for a new account.
+- Actual Results: I verify that I am on the registration page. Works as expected.
+
 ### Lighthouse Testing
 
 Please see below some lighthouse testing I carried out on the project. Most of the scores are in a good range, the performance mainly dips due to the quality and size of the photos on the posts. I am not willing to compress the files and comprimise the quality presented on the website. 
 
 Results:
 Lighthouse Homepage
+
 ![Lighthouse Homepage](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404986/lighthouse-home_gap4rp.png)
 
 Lighthouse Mobile Homepage
+
 ![Lighthouse Mobile Homepage](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404923/mobile-lighthouse-home_ddkjda.png)
 
 Lighthouse Create Post
+
 ![Lighthouse Create Post](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404923/lighthouse-create_hsmebe.png)
 
 Lighthouse Profile
+
 ![Lighthouse Profile](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404923/lighthouse-profile_rxkubm.png)
 
 Lighthouse Feed
+
 ![Lighthouse Feed](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404924/lighthouse-feed_ay3qkt.png)
 
 Lighthouse Liked
+
 ![Lighthouse Liked](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404924/lighthouse-liked_idxn8k.png)
 
 Lighthouse Bookmarked
+
 ![Lighthouse Bookmarked](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404923/lighthouse-bookmarked_hyrhy4.png)
 
 Lighthouse Mobile Profile
+
 ![Lighthouse Mobile Profile](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404923/mobile-lighthouse-profile_yxzgp2.png)
 
 
