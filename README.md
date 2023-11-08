@@ -540,6 +540,8 @@ I have chosen a font that is easy to read but also has a strong bold presence.
 
 I aquired this font using Google Fonts.
 
+In summary, I chose the 'ADLaM Display' font for my project after thoughtful consideration. The font was selected with a focus on factors such as readability, brand identity, visual presence, and the unique character it adds to my website. It's crucial to ensure that the font harmonizes with my project's overall design and message, ultimately enhancing the user experience; which I beleive it does.
+
 ### Current Features Frontend
 
 Logo:
