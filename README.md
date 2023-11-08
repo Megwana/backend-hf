@@ -105,7 +105,7 @@ CRUD:
 
 Testing for posts was carried out on the backend. The link to view this can be seen [here](posts/tests.py)
 
-### Backend Manual Testing:
+### Backend URL Manual Testing:
 
 `1. Home Page URL`
 
@@ -144,7 +144,7 @@ Testing for posts was carried out on the backend. The link to view this can be s
 
 **drf_api url.py Results: All work as expected.**
 
-### Bookend Manual Testing:
+### Bookend Backend Manual Testing:
 
 1. Create a Bookmark
 
@@ -185,7 +185,9 @@ Testing for posts was carried out on the backend. The link to view this can be s
   2. I retrieved all bookmarks for a specific user.
   3. I verified that the bookmarks are ordered in descending order based on their `created_at` timestamp.
 
-### Comment Manual Testing:
+**Bookmark Results: All work as expected.**
+
+### Comment Backend Manual Testing:
 
 1. Create a Comment
 
@@ -225,7 +227,46 @@ Testing for posts was carried out on the backend. The link to view this can be s
 - **Testing I Have Carried Out**:
   1. I retrieved an existing comment instance.
   2. I confirmed that the `content` attribute of the comment contains the correct comment text.
-  
+
+**Comment Results: All work as expected.**
+
+### Follow Backend Manual Testing:
+
+1. Create a Follower Relationship
+
+- **Test Scenario**: Creating a follower relationship.
+- **Testing I Have Carried Out**:
+  1. Using the Django admin interface or an API endpoint, I created a new `Follower` instance by associating it with an 'owner' (User who is following) and a 'followed' (User being followed).
+  2. I verified that the follower relationship is created without errors.
+  3. I confirmed that the `created_at` field is automatically set to the current date and time.
+  4. I checked that the follower relationship is associated with the correct 'owner' and 'followed' users.
+
+2. Follower and Followed Users
+
+- **Test Scenario**: Verifying the 'owner' and 'followed' users in a Follower relationship.
+- **Testing I Have Carried Out**:
+  1. I retrieved an existing Follower instance.
+  2. I confirmed that the `owner` attribute of the Follower instance refers to the correct 'owner' (User who is following).
+  3. I confirmed that the `followed` attribute of the Follower instance refers to the correct 'followed' (User being followed).
+
+3. Follower Relationship Timestamps
+
+- **Test Scenario**: Checking the timestamps for Follower relationships.
+- **Testing I Have Carried Out**:
+  1. I created multiple Follower relationships at different times.
+  2. I retrieved all Follower relationships for a specific 'owner' or 'followed' user.
+  3. I verified that the Follower relationships are ordered in descending order based on their `created_at` timestamp.
+
+4. Unique Constraint for Follower Relationships
+
+- **Test Scenario**: Ensuring the uniqueness of Follower relationships.
+- **Testing I Have Carried Out**:
+  1. I attempted to create a new Follower relationship with the same 'owner' and 'followed' users as an existing relationship.
+  2. I verified that the system prevents the creation of duplicate Follower relationships.
+  3. I confirmed that an error or exception is raised, indicating a violation of the unique constraint.
+
+**Follower Results: All work as expected.**
+
 # Frontend
 
 ## Frontend Contents
