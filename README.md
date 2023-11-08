@@ -248,11 +248,18 @@ I aquired this font using Google Fonts.
 ### Current Features Frontend
 
 Logo:
+
 This is the websites logo, designed as a running person. When clicked it will revert a user to the home page.
 
 ![Logo](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693644441/logo-home_wdtad7.png)
 
+Favicon:
+
+This is the same as the logo but shoes in the tab in people's web browsers.
+![Favicon](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699406378/favicon-tab_fqotnp.png)
+
 Sign Up:
+
 This is the sign up page where users can sign up and once they do this it will revert them to the sign in page. 
 ![SignUp](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693644444/sign-up_kbmqzs.png)
 
@@ -272,8 +279,90 @@ The Navbar presents differently depending on whether a user is signed in or out.
 Here is an example below of instances where a visitor will be reminded they need to sign in if they want to like a post etc.
 
 ![LogtoLike](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693645038/logtolike_i8ro0u.png)
+
 ![LogtoDislike](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693645038/logtodislike_b2djly.png)
-![LogtoBookmark](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693645038/logtobookmark_vpxuno.png)
+
+![LogtoBookmark](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699384201/login-to-bookmark_aqeadn.png)
+
+![LogtoComment](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699384201/login-to-comment_ppd0m4.png)
+
+Like:
+
+Liked Post turns Red
+
+![LikedPost](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693644441/like-dislike_koj4l7.png)
+
+Liked Feed - To improve this in the future I want to add a redirect cabability so if a user unlikes it. The page will redirect automatically rather than a user seeing it disapear straight away until they manually refresh or go elsewhere and return. I didn't prioritise this feature as I see similar actions like this still occur on many websites. But I look to fulfill good practice moving forward. To add, this applies to the bookmark feed. 
+
+![LikedFeed](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693644445/liked-feed_rl8agh.png)
+
+Bookmark:
+
+When selected and Bookmarked
+
+![Bookmarked](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699384201/bookmarked_z5p7am.png)
+
+When a bookmark is yet to be selected or is unbookmarked
+
+![Unbookmarked](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699384200/hover-bookmark_fi2i2e.png)
+
+Empty Bookmark Feed - see how navbar bookmarked icon is highlighted red to show user is on that page.
+
+![EmptyBookmarkFeed](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699384205/no-bookmark-feed-yet_lyyb4p.png)
+
+Bookmark Feed - see how navbar bookmarked icon is highlighted red to show user is on that page.
+
+![BookmarkFeed](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699384203/bookark-feed_g1udge.png)
+
+Follow:
+
+Most Followed Profiles - ranked in order of most followed profiles on the website.
+
+![MostFollowed](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699384200/follow-profiles_co2frm.png)
+
+Following: when a user is following someone, this is what the button present as.
+
+![Following](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699407167/currentlyfollowing_ttr9d9.png)
+
+Not Following: When a user is yet to follow somone it presents as below.
+
+![NotFollowing](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699407165/notfollowing_nufoeg.png)
+
+Comment:
+
+Comment section:
+
+![CommentSection](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699384207/comment-section_cef4oc.png)
+
+Edited Comment: This show an edited version from Tom's comment in the above image.
+
+![EditComment](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699384200/edited-comment_vk5rmu.png)
+
+Edit and Delete Comment Options:
+
+![EditDeleteComment](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699407431/edit-delete-options-comments_oe8e0g.png)
+
+Profile:
+
+Standard generic profile photo when a user first signs up. See the top right.
+
+![NoProfileImage](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699407581/new-user-profile_wuey2h.png)
+
+See how the same user profile now has a photo added.
+
+![ProfilePicAdded](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699407646/added-profile-pic_vserm9.png)
+
+You have the ability to edit the profile, change the username or change the password with the following:
+
+![EditProfileOptions](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699407643/edit-change-profile_zikkrr.png)
+
+Edit Profile: You have the ability to change/add a picture and change/add a bio.
+
+![EditProfile](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699407630/edit-profile-detail_e5p8p9.png)
+
+Changed username:
+
+![AdamWill](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699407850/changed-username_emxnny.png)
 
 ## Technology Used:
 
