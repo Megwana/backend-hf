@@ -119,10 +119,11 @@ Testing for posts was carried out on the backend. The link to view this can be s
       - [Colour Scheme](#colour-scheme)
       - [Typography](#typography)
       - [Current Features Frontend](#current-features-frontend)
-  - [Technology Used](#technology-used)
-  - [Frontend Tests](#frontend-tests)
-  - [Deployment](#deployment)
-  - [Credit & Acknowledgments](#credit-and-acknowledgments)
+- [React Architecture](#rea)
+- [Technology Used](#technology-used)
+- [Frontend Tests](#frontend-tests)
+- [Deployment](#deployment)
+- [Credit & Acknowledgments](#credit-and-acknowledgments)
 
 
 ## UX Design
@@ -363,6 +364,90 @@ Edit Profile: You have the ability to change/add a picture and change/add a bio.
 Changed username:
 
 ![AdamWill](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699407850/changed-username_emxnny.png)
+
+Dislike:
+
+This is what the dislike icon looks like when someone has disliked the post.
+
+![Dislike](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699408032/disliked_i6pqbl.png)
+
+When a user is hovering over the dislike, it turns red
+
+![DislikeHover](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699408032/login-dislike_glexzh.png)
+
+When a user is yet to dislike or has clicked on the thumbs down icon if it has already been disliked it will present as a black outline with not colour within the outline. 
+
+![Undislike](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699408032/dislikeundislike_r3m9xx.png)
+
+## React Architecture
+
+**Introduction**
+
+### Reusability in React
+
+React, a widely used JavaScript library for building user interfaces, emphasizes the concept of component reusability. Components are the building blocks of React applications, and reusing them is key to efficient development. Component reusability offers numerous advantages, such as:
+
+1. Code Efficiency: Reusing components reduces code duplication, making it easier to manage and maintain the codebase.
+
+2. Consistency: Using the same components across the application ensures a consistent look and behavior, contributing to a cohesive user experience.
+
+3. Time Savings: By reusing components, developers save time since they don't need to recreate similar elements from the ground up.
+
+### Specialist Front-End Developers' Role
+
+Specialist Front-End developers act as the bridge between design and functionality, transforming visual concepts into interactive and user-friendly web applications. 
+
+The Key Role of Specialist Front-End Developers are:
+
+UI Design: Creating visually appealing and intuitive user interfaces that align with the design specifications.
+
+UX Optimization: Ensuring a seamless and delightful user experience is a core part. This involves performance optimization, responsiveness, and accessibility.
+
+Code Quality: Writing clean, maintainable code is essential. Ensuring the codebase is scalable and can be easily extended as the application grows. This is also important when working with teams, enabling members to follow one anothers code.
+
+### Reuseable Components:
+
+1. Asset Component
+
+This component is designed to display assets, such as images, with optional features like a spinner and a message.
+
+Reusability: I can use it wherever I need to display assets.
+
+Use Example: Displaying images with loading spinners and messages in various parts of my website.
+
+2. Avatar Component:
+
+The Avatar component is designed to display user avatars with customizable height and optional text.
+
+Reusability: I can use it to display avatars for different user profiles.
+
+Use Example: Displaying user avatars alongside their names and profiles.
+
+3. MoreDropdown and ProfileEditDropdown Components:
+
+MoreDropdown is a versatile dropdown component that can be used for actions like editing and deleting.
+
+ProfileEditDropdown is a specific dropdown component for profile-related editing action.
+
+Reusability: These components can be used for various dropdown menus within my website.
+
+Use Example: Implementing dropdown menus for actions like editing and deleting content or profile-related actions.
+
+4. NavBar Component:
+
+The NavBar component represents the navigation bar, including various navigation links and icons.
+
+Reusability: It can be used as the consistent navigation bar across different pages.
+
+Use Example: Providing a consistent and user-friendly navigation experience.
+
+5. NotFound Component:
+
+The NotFound component is used to display a standard "Page Not Found" message.
+
+Reusability: It can be used wherever a "Page Not Found" message needs to be displayed, ensuring a consistent user experience.
+
+Use Example: Showing the "Page Not Found" message in case of route errors.
 
 ## Technology Used:
 
