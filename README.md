@@ -572,6 +572,36 @@ The process the unlike and undislike a post is the same as bookmark. Hover back 
 - **Expected Results:** After step 3, my operating system's folders for photo upload should open.
 - **Actual Results:** Confirm that clicking "Change Image" opens my OS folders for photo upload. Once saving the picture to the user it is uploaded to cloudinary. Works as expected.
 
+### Lighthouse Testing
+
+Please see below some lighthouse testing I carried out on the project. Most of the scores are in a good range, the performance mainly dips due to the quality and size of the photos on the posts. I am not willing to compress the files and comprimise the quality presented on the website. 
+
+Results:
+Lighthouse Homepage
+![Lighthouse Homepage](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404986/lighthouse-home_gap4rp.png)
+
+Lighthouse Mobile Homepage
+![Lighthouse Mobile Homepage](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404923/mobile-lighthouse-home_ddkjda.png)
+
+Lighthouse Create Post
+![Lighthouse Create Post](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404923/lighthouse-create_hsmebe.png)
+
+Lighthouse Profile
+![Lighthouse Profile](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404923/lighthouse-profile_rxkubm.png)
+
+Lighthouse Feed
+![Lighthouse Feed](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404924/lighthouse-feed_ay3qkt.png)
+
+Lighthouse Liked
+![Lighthouse Liked](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404924/lighthouse-liked_idxn8k.png)
+
+Lighthouse Bookmarked
+![Lighthouse Bookmarked](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404923/lighthouse-bookmarked_hyrhy4.png)
+
+Lighthouse Mobile Profile
+![Lighthouse Mobile Profile](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699404923/mobile-lighthouse-profile_yxzgp2.png)
+
+
 ## Deployment
 
 ## Deployment Process
