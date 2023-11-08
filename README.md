@@ -305,146 +305,234 @@ Here is an example below of instances where a visitor will be reminded they need
 
 ### Manual Testing 
 
-1. **User Registration:**
-  - Description: Test the registration process for new users.
-  - Steps:
-    1. Navigate to the sign up page.
+**Authentication Tests:**
+
+**1. User Registration:**
+- **Description:** Test the registration process for new users.
+- **Steps:**
+    1. Navigate to the sign-up page.
     2. Fill in valid registration information.
     3. Click the "Sign Up" button.
     4. Verify successful registration and login.
-  - Expected Results: After step 4, the user should be registered and redirected to the 'sign in' page. The user should then able be able to successfully sign in. 
-  - Actual Results: Redirected to sign in page now user details have been created. Works as expected.
+- **Expected Results:** After step 4, my account should be registered, and I should be redirected to the 'sign in' page. I should then be able to successfully sign in.
+- **Actual Results:** Redirected to the sign-in page, and my details have been created. Works as expected.
 
-2. **Login Functionality:**
-  - Description: Test user login functionality.
-  - Steps:
+**2. Login Functionality:**
+- **Description:** Test user login functionality.
+- **Steps:**
     1. Go to the login page.
     2. Enter valid login credentials.
     3. Click the "Login" button.
     4. Verify successful login and redirection to the user home page.
-  - Expected Results: After step 4, the user should be logged in and redirected to their home page.
-  - Actual Results: Verify logged in user profile is in top right and navbar changed to 'sign out' options. Works as expected.
+- **Expected Results:** After step 4, I should be logged in and redirected to my home page.
+- **Actual Results:** Verify that the logged-in user profile is in the top right, and the navbar changed to 'sign-out' options. Works as expected.
 
-**3. Following Someone**
-- Description: Test the functionality to follow another user.
+## Authentication Validation Tests
+
+### Sign-Up Blank Space Validation
+
+- Description:Test if blank spaces in sign-up information are appropriately flagged.
 - Steps:
-   1. Log in to account.
-   2. Go to the profile of the user you want to follow OR the profile on 'Most Followed Profiles'.
+   1. Navigate to the sign-up page.
+   2. Attempt to enter blank spaces in the username, email, and password fields.
+   3. Click the "Sign Up" button.
+
+- Expected Results: After step 3, the sign-up process should be blocked, and an error message should inform the user that blank spaces are not allowed.
+- Actual Results: Verify that an error message is displayed, and the sign-up process is blocked when blank spaces are used in the input fields. Works as expected.
+
+### Sign-Up and Signin Character Validation
+
+- Description: Test if minimum characters in sign-up and signin information are appropriately flagged.
+- Steps:
+   1. Navigate to the sign-up page.
+   2. Attempt to enter username and password that is below the character minimum.
+   3. Click the "Sign Up"or "signin" button.
+- Expected Results: After step 3, the sign-up/signin process should be blocked, and an error message should inform the user that more characters need to be included.
+- Actual Results: Verify that an error message is displayed, and the sign-up process is blocked. Works as expected.
+
+### Registration Blank Space Validation
+
+- Description: Test if blank spaces in registration information are appropriately flagged.
+- Steps:
+   1. Log in to the user's account.
+   2. Go to registration page or edit registration information.
+   3. Attempt to enter blank spaces in the username and password fields.
+   4. Save the changes.
+- Expected Results: After step 4, the changes should not be saved, and an error message should inform the user that blank spaces are not allowed in the registration information.
+- Actual Results: Verify that an error message is displayed, and the changes are not saved when blank spaces are used in the input fields. Works as expected.
+
+### Sign-In Incorrect Password Validation
+
+- Description: Test if incorrect passwords during sign-in are appropriately flagged.
+- Steps:
+   1. Go to the sign-in page.
+   2. Enter a valid username.
+   3. Enter an incorrect password.
+   4. Click the "Sign In" button.
+- Expected Results: After step 4, the sign-in process should be blocked, and an error message should inform the user that the password is incorrect.
+- Actual Results: Verify that an error message is displayed, and the sign-in process is blocked when an incorrect password is entered. Works as expected.
+
+## Comment Tests
+
+### Comment Creation
+
+- Description: Test the creation of comments on posts.
+- Steps:
+   1. Login into account.
+   2. Navigate to a post. Click the "Comment" icon.
+   3. Enter a comment in the comment box.
+   4. Click "post".
+- Expected Results: The comment should be successfully posted and displayed below the post.
+- Actual Results: Verify that the comment is visible and associated with the correct post. Works as expected.
+
+### Edit Comment
+
+- Description: Test the editing of existing comments.
+- Steps:
+   1. Login into account.
+   2. Go to a post with my comment.
+   3. Click three dots next to comment. 
+   4. Click the "Edit" icon next to your comment.
+   5. Edit the comment content.
+   6. Click the "Save" button.
+- Expected Results: The comment should be successfully edited with the new content displayed.
+- Actual Results: Verify that the comment is updated with the edited content. Works as expected.
+
+## Comment Deletion
+
+- Description: Test the deletion of comments on posts.
+- Steps:
+   1. Login into account.
+   2. Go to a post with my comment.
+   3. Click three dots next to comment. 
+   4. Click the "Delete" trash icon next to your comment.
+- Expected Results: The comment should be deleted and no longer visible.
+- Actual Results: Verify that the comment is no longer displayed after deletion. Works as expected.
+
+## Post Tests
+
+### Post Creation
+
+- Description: Test the creation of new posts.
+- Steps:
+   1. Login into my account.
+   2. Navigate to the Add Post" button in navbar.
+   3. Enter post title, optional content and image.
+   4. Click the "Create" button.
+- Expected Results: The new post should be successfully created and displayed in the feed.
+- Actual Results: Verify that the new post is visible in the home page. Works as expected.
+
+### Edit Post
+
+- Description: Test the editing of existing posts.
+- Steps:
+   1. Login into account.
+   2. Go to one of my posts.
+   3. Click three dots in top right of post.
+   4. Click the "Edit" icon on the post.
+   5. Edit the post content or attachments.
+   6. Click the "Save" button.
+- Expected Results: The post should be successfully edited with the updated content and attachments.
+- Actual Results: Verify that the post is updated with the edited content and attachments. Works as expected.
+
+### Post Deletion
+
+- Description: Test the deletion of existing posts.
+- Steps:
+   1. Login to account.
+   2. Go to one of your posts.
+   3. Click the "Edit" icon on the post.
+   4. Click the "Delete" icon on the post.
+- Expected Results: The post should be deleted and no longer visible in the home page/ profile posts etc.
+- Actual Results: Verify that the post is no longer displayed after deletion. Works as expected.
+
+## Follow Tests
+
+### Follow User
+
+- Description: Test the functionality of following other users.
+- Steps:
+   1. Login into account.
+   2. Go to the profile of a user or Most Followed profiles (that shows follow button next to each user) you want to follow.
    3. Click the "Follow" button.
-- Expected Results: After step 3, you should be following the user, and their content should appear in your feed.
-- Actual Results: Successully following the user, follow icon changes to unfollow and their content is visible in my feed.
+- Expected Results: You should be following the user, and their updates should appear in your feed.
+- Actual Results: Verify that you are following the user, and their updates are in your feed. Works as expected.
 
-**4. Unfollowing Someone**
-- Description: Test the functionality to unfollow a user.
+### Unfollow User
+
+- Description: Test the functionality of unfollowing users you previously followed.
 - Steps:
-   1. Log in to account.
-   2. Go to the profile of the user you want to follow OR the profile on 'Most Followed Profiles'.
+   1. Log in to your account.
+   2. Go to the profile of a user you are following.
    3. Click the "Unfollow" button.
-- Expected Results: After step 3, you should no longer be following the user, and their content should not appear in your feed.
-- Actual Results: Successfully unfollowed the user, 'unfollow' button changes back to 'follow' and their content is no longer visible in my feed.
+- Expected Results: You should no longer be following the user, and their updates should no longer appear in your feed.
+- Actual Results: Verify that you are no longer following the user, and their updates are no longer in your feed. Works as expected.
 
-**4. Liking a Post**
-- Description: Test my ability to like a post.
-- Steps:
-   1. Log in to my account.
-   2. Find a post.
-   3. Click the "Like" button.
-- Expected Results: After step 3, the post should show that I have liked it, and the like count should increase.
-- Actual Results: Verify that the post reflects my like, and the like count increases. Works as expected.
+### Not Follow Your Own Profile
 
-**5. Commenting on a Post**
-- Description: Test my ability to leave a comment on a post.
+- Description: Test the functionality that you cannot follow yourself.
 - Steps:
-   1. Log in to my account.
-   2. Find a post.
-   3. Click the "Comment" button.
-   4. Enter my comment and click "Submit."
-- Expected Results: After step 4, my comment should be visible on the post.
-- Actual Results: Check that my comment is displayed on the post. Works as expected.
+   1. Login into account.
+   2. Go to my profile of a user or Most Followed profiles (that shows follow button next to each user).
+   3. Should have no follow button available.
+- Expected Results: No follow button available next to your profile but others do.
+- Actual Results: Works as expected.
 
-**6. Editing a Post**
-- Description: Test my ability to edit one of my own posts.
-- Steps:
-   1. Log in to my account.
-   2. Find one of my posts and click on the three dots in the top right.
-   3. Click the "Edit" icon.
-   4. Make changes to the post and save.
-- Expected Results: After step 4, my post should reflect the changes I made.
-- Actual Results: Verify that my edited post shows the modifications. Works as expected.
+## Bookmark, Like, Dislike Tests
 
-**7. Deleting a Post**
-- Description: Test my ability to delete one of my own posts.
-- Steps:
-   1. Log in to my account.
-   2. Find one of my posts and click on the three dots in the top right.
-   3. Click the "Trash" icon.
-- Expected Results: After step 3, my post should be removed from the platform.
-- Actual Results: Confirm that my post has been deleted. Works as expected.
+### Bookmark Post
 
-**8. Editing a Comment**
-- Description: Test my ability to edit one of my own comments on a post.
+- Description: Test the ability to bookmark posts for later viewing.
 - Steps:
-   1. Log in to my account.
-   2. Find one of my comments on a post.
-   3. Click the "Edit" icon.
-   4. Make changes to the comment and save.
-- Expected Results: After step 4, my comment should reflect the changes I made.
-- Actual Results: Verify that my edited comment shows the modifications. Works as expected.
+   1. Login into account.
+   2. Go to a post you want to bookmark.
+   3. Click the "Bookmark" icon in the top right of the post.
+- Expected Results: The post should be bookmarked and available in your bookmarks for future reference. Bookmark icon is now gold coloured.
+- Actual Results: Verify that the post is saved in your bookmarks. Works as expected.
 
-**9. Deleting a Comment**
-- Description: Test my ability to delete one of my own comments on a post.
-- Steps:
-   1. Log in to my account.
-   2. Find one of my comments on a post.
-   3. Click the "Trash" icon.
-- Expected Results: After step 3, my comment should be removed from the post.
-- Actual Results: View that the comment has been deleted. Works as expected.
+### Remove Bookmark
 
-**10. Bookmarking a Post**
-- Description: Test my ability to bookmark a post for later viewing.
+- Description: Test the removal of bookmarked posts.
 - Steps:
-   1. Log in to my account.
-   2. Find a post.
-   3. Click the "Bookmark" icon in the top right.
-- Expected Results: After step 3, the post should be saved in my bookmarks for future reference.
-- Actual Results: Check that the post is saved in my bookmarks. Works as expected.
-
-**11. Unliking a Post**
-- Description: Test my ability to remove a like from a post.
-- Steps:
-   1. Log in to my account.
-   2. Find a post that I have liked.
-   3. Click the "Unlike" button.
-- Expected Results: After step 3, the post should no longer show that I liked it, and the like count should decrease.
-- Actual Results: Confirm that the post no longer reflects my like. Works as expected.
-
-**12. Disliking a Post**
-- Description: Test my ability to dislike a post.
-- Steps:
-   1. Log in to my account.
-   2. Find a post.
-   3. Click the "thumbs-down" button.
-- Expected Results: After step 3, the post should show that I have disliked it by changing color, and the dislike count should increase.
-- Actual Results: Verify that the post reflects my dislike, and the dislike count increases. Works as expected.
-
-**13. Undisliking a Post**
-- Description: Test my ability to remove a dislike from a post.
-- Steps:
-   1. Log in to my account.
-   2. Find a post that I have disliked.
-   3. Click the "thumbs-down" button.
-- Expected Results: After step 3, the post should no longer show that I disliked it by changing  and the dislike count should decrease.
-- Actual Results: Confirm that the post no longer reflects my dislike. Works as expected.
-
-**14. Unbookmarking a Post**
-- Description: Test my ability to remove a bookmark from a post.
-- Steps:
-   1. Log in to my account.
+   1. Login into account.
    2. Go to my bookmarks.
-   3. Find a bookmarked post.
-   4. Click the gold "bookmark" icon.
-- Expected Results: After step 4, the post should be removed from my bookmarks and bookmark icon goes back to grey outline and no gold.
-- Actual Results: Check that the post has been successfully unbookmarked. Works as expected.
+   3. Locate the bookmarked post you want to remove.
+   4. Click the "Bookmark" icon which should go back to it's unbookmarked stated with a light grey outline.
+- Expected Results: The post should be removed from your bookmarks and no longer accessible there.
+- Actual Results: Verify that the post is no longer in your bookmarks after removal. Works as expected.
+
+### Like Post
+
+- Description: Test the ability to like posts.
+- Steps:
+   1. Login into account.
+   2. Go to a post you want to like.
+   3. Click the "Like" icon at the bottom of the post.
+- Expected Results: The post should be liked, and your like should be visible.
+- Actual Results: Verify that your like is recorded and visible on the post. Works as expected.
+
+### Dislike Post
+
+- Description: Test the ability to dislike posts.
+- Steps:
+   1. Log in to your account.
+   2. Go to a post you want to dislike.
+   3. Click the "Dislike" icon at the bottom of the post.
+- Expected Results: The post should be disliked, and your dislike should be visible.
+- Actual Results: Verify that your dislike is recorded and visible on the post. Works as expected.
+
+### Unlike and Undislike Post
+
+The process the unlike and undislike a post is the same as bookmark. Hover back on the heart icon (for the like) and the thumbs down icon for dislike. When you click on them they should return to black outlines with no longer a solid presenting colour. 
+
+### Like and dislike the Same Post
+
+- Description: Test the ability to dislike and like the same post using the same user. 
+- Steps:
+   1. Log in to your account.
+   2. Go to a post and try to like it, then try to dislike it (vice versa).
+- Expected Results: A overlaytrigger will notify you, you can't do both.
+- Actual Results: Verify that the post cannot be liked and disliked. You must undo one of the other to carry out the other. Works as expected.
 
 **Profile Tests**
 
