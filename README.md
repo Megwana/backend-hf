@@ -1,4 +1,6 @@
-# HotFeet Backend & Frontend
+# HotFeet - Backend & Frontend
+
+![RunningHero](https://res.cloudinary.com/dnkoqrvie/image/upload/v1697040192/media/images/banner_rzae6b.jpg)
 
 # Backend REAMEME
 
