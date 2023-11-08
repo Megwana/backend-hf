@@ -463,7 +463,7 @@ I wanted to keep the colour scheme very simple and clean given that running/ run
 
 There for I have gone with a very simple monotone colour scheme with on bright red as the signalling colour. I chose red to represent the 'hot' in hotfeet. The name hotfeet is meant to represent people being 'hot' / 'passionate' about the topic. Furthermore it is meant to be a play on words for both a 'hot topic' in a social platform and 'hot' feet for all the fast runners out there.
 
-![ColourScheme](https://res.cloudinary.com/dnkoqrvie/image/upload/v1693648219/ColourScheme_fqk5sv.png)
+![ColourScheme](https://res.cloudinary.com/dnkoqrvie/image/upload/v1699412917/colour-scheme_hiet1q.png)
 
 ### Typography
 
