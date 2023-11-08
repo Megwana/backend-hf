@@ -459,7 +459,7 @@ Won't-Haves = 10%
   - Infinate Scroll
 
 - Won't Have  
-   - Poll posts (a future feature to grown the website)
+   - Poll posts (a future feature to grown the website). I had developed the model for this in this [repository](https://github.com/Megwana/hotfeet-backend/tree/main/backend/polls) but did not have time to implement the front end react code.
 
 ## Structure Plane
 
