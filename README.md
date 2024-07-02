@@ -6,7 +6,7 @@
 
 ## Project Description
 
-This repository hold the API for the full stack application HotFeet. This website is for running shoe enthusiasts who can share their own posts and see other users posts about running shoes. And interact with posts and users by liking, disliking, commenting and bookmarking posts; and following one another. It is built using Django, Django Rest Framework and React.
+This repository holds the API for the full stack application HotFeet. This website is for running shoe enthusiasts who can share their own posts and see other users posts about running shoes. And interact with posts and users by liking, disliking, commenting and bookmarking posts; and following one another. It is built using Django, Django Rest Framework and React.
 
 > **Link to the backend repository [HotFeet](https://hot-feet-86e6050a3b3d.herokuapp.com)**
 
