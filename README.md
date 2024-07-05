@@ -9,7 +9,7 @@
 This repository holds the API for the full stack application HotFeet. This website is for running shoe enthusiasts who can share their own posts and see other users posts about running shoes. And interact with posts and users by liking, disliking, commenting and bookmarking posts; and following one another. It is built using Django, Django Rest Framework and React.
 
 <details>
-  <summary">Table of Contents</summary>
+  <summary>Table of Contents</summary>
   
   - [Project Description](#project-description)
   - [Contents](#contents)
